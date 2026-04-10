@@ -43,7 +43,7 @@ export default function Services() {
           </h2>
 
           <p className="text-gray-400 text-sm sm:text-base max-w-2xl mx-auto px-2 sm:px-0">
-            I build AI systems that don’t just look impressive — they deliver real business results.
+            I build AI systems that don’t just look impressive they deliver real business results.
           </p>
         </div>
 
