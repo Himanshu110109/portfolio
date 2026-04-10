@@ -20,9 +20,9 @@ const skillGroups = [
   desc: "Designing intelligent, autonomous AI systems",
   skills: [
     { name: "Agentic Systems", icon: <FaRobot /> },          
-    { name: "LangChain", icon: <SiLangchain /> },            
-    { name: "RAG Pipelines", icon: <FaBrain /> },            
+    { name: "LangChain", icon: <SiLangchain /> }, 
     { name: "n8n", icon: <FaProjectDiagram /> },
+    { name: "RAG Pipelines", icon: <FaBrain /> },            
   ],
 },
   {
