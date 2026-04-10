@@ -12,7 +12,7 @@ import {
 } from "react-icons/si";
 import { FaBrain, FaRobot } from "react-icons/fa";
 import { SiLangchain } from "react-icons/si";
-import { TbWorkflow } from "react-icons/tb";
+import { FaProjectDiagram } from "react-icons/fa";
 
 const skillGroups = [
   {
@@ -22,7 +22,7 @@ const skillGroups = [
     { name: "Agentic Systems", icon: <FaRobot /> },          
     { name: "LangChain", icon: <SiLangchain /> },            
     { name: "RAG Pipelines", icon: <FaBrain /> },            
-    { name: "n8n", icon: <TbWorkflow /> }, 
+    { name: "n8n", icon: <FaProjectDiagram /> },
   ],
 },
   {
