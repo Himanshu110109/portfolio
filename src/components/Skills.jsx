@@ -71,7 +71,7 @@ export default function Skills() {
           </h2>
 
           <p className="text-gray-400 text-sm sm:text-base px-2 sm:px-0">
-            I build complete AI systems — from backend pipelines to polished UI.
+            I build complete AI systems from backend pipelines to polished UI.
           </p>
         </div>
 
