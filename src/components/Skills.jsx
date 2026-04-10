@@ -10,18 +10,21 @@ import {
   SiRender,
   SiStreamlit
 } from "react-icons/si";
-import { FaBrain } from "react-icons/fa";
+import { FaBrain, FaRobot } from "react-icons/fa";
+import { SiLangchain } from "react-icons/si";
+import { TbWorkflow } from "react-icons/tb";
 
 const skillGroups = [
   {
-    title: "AI Engineering",
-    desc: "Designing intelligent, autonomous AI systems",
-    skills: [
-      { name: "Agentic Systems", icon: <FaBrain /> },
-      { name: "LangChain", icon: <FaBrain /> },
-      { name: "RAG Pipelines", icon: <FaBrain /> },
-    ],
-  },
+  title: "AI Engineering",
+  desc: "Designing intelligent, autonomous AI systems",
+  skills: [
+    { name: "Agentic Systems", icon: <FaRobot /> },          
+    { name: "LangChain", icon: <SiLangchain /> },            
+    { name: "RAG Pipelines", icon: <FaBrain /> },            
+    { name: "n8n", icon: <TbWorkflow /> }, 
+  ],
+},
   {
     title: "Backend Systems",
     desc: "Scalable APIs & AI pipelines",
