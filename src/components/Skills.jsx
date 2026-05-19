@@ -9,14 +9,14 @@ import {
   SiGithub,
   SiRender,
   SiStreamlit,
-  SiAmazonaws,
   SiDocker,
   SiKubernetes,
   SiGrafana,
   SiPython,
   SiFlask,
 } from "react-icons/si";
-import { FaBrain, FaRobot } from "react-icons/fa";
+
+import { FaBrain, FaRobot, FaAws } from "react-icons/fa";
 import { SiLangchain } from "react-icons/si";
 import { FaProjectDiagram } from "react-icons/fa";
 
@@ -57,7 +57,7 @@ const skillGroups = [
     { name: "Vercel", icon: <SiVercel /> },
     { name: "Render", icon: <SiRender /> },
     { name: "Streamlit", icon: <SiStreamlit /> },
-    { name: "AWS", icon: <SiAmazonaws /> },
+    { name: "AWS", icon: <FaAws /> },
     { name: "Docker", icon: <SiDocker /> },
     { name: "Kubernetes", icon: <SiKubernetes /> },
     { name: "Grafana", icon: <SiGrafana /> },
