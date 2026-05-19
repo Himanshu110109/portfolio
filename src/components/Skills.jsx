@@ -8,7 +8,13 @@ import {
   SiVercel,
   SiGithub,
   SiRender,
-  SiStreamlit
+  SiStreamlit,
+  SiAmazonaws,
+  SiDocker,
+  SiKubernetes,
+  SiGrafana,
+  SiPython,
+  SiFlask,
 } from "react-icons/si";
 import { FaBrain, FaRobot } from "react-icons/fa";
 import { SiLangchain } from "react-icons/si";
@@ -26,13 +32,15 @@ const skillGroups = [
   ],
 },
   {
-    title: "Backend Systems",
-    desc: "Scalable APIs & AI pipelines",
-    skills: [
-      { name: "FastAPI", icon: <SiFastapi /> },
-      { name: "Node.js", icon: <SiNodedotjs /> },
-    ],
-  },
+  title: "Backend Systems",
+  desc: "Scalable APIs & AI pipelines",
+  skills: [
+    { name: "FastAPI", icon: <SiFastapi /> },
+    { name: "Node.js", icon: <SiNodedotjs /> },
+    { name: "Python", icon: <SiPython /> },
+    { name: "Flask", icon: <SiFlask /> },
+  ],
+},
   {
     title: "Frontend",
     desc: "Modern UI with smooth UX",
@@ -42,15 +50,19 @@ const skillGroups = [
     ],
   },
   {
-    title: "Deployment",
-    desc: "Ship fast and reliably",
-    skills: [
-      { name: "GitHub", icon: <SiGithub /> },
-      { name: "Vercel", icon: <SiVercel /> },
-      { name: "Render", icon: <SiRender /> },
-      { name: "Streamlit", icon: <SiStreamlit /> },
-    ],
-  },
+  title: "Deployment",
+  desc: "Ship fast and reliably",
+  skills: [
+    { name: "GitHub", icon: <SiGithub /> },
+    { name: "Vercel", icon: <SiVercel /> },
+    { name: "Render", icon: <SiRender /> },
+    { name: "Streamlit", icon: <SiStreamlit /> },
+    { name: "AWS", icon: <SiAmazonaws /> },
+    { name: "Docker", icon: <SiDocker /> },
+    { name: "Kubernetes", icon: <SiKubernetes /> },
+    { name: "Grafana", icon: <SiGrafana /> },
+  ],
+},
 ];
 
 export default function Skills() {
