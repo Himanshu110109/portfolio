@@ -1,19 +1,26 @@
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaEnvelope,
+  FaArrowRight,
+} from "react-icons/fa";
 import { toast } from "react-toastify";
 
 export default function Contact() {
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     const formData = new FormData(e.target);
 
     try {
-      await fetch("https://formsubmit.co/ajax/himanshu110109@gmail.com", {
-        method: "POST",
-        body: formData,
-      });
+      await fetch(
+        "https://formsubmit.co/ajax/himanshu110109@gmail.com",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
 
       e.target.reset();
 
@@ -24,112 +31,247 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-28 px-4 sm:px-6 relative overflow-hidden">
+    <section
+      id="contact"
+      className="relative py-24 md:py-32 px-4 sm:px-6 overflow-hidden"
+    >
+      {/* BACKGROUND */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-purple-600/10 blur-[140px] rounded-full" />
 
-      <div className="blob w-[200px] h-[200px] md:w-[300px] md:h-[300px] bg-purple-600 bottom-10 right-5 md:right-20" />
+        <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-cyan-500/10 blur-[120px] rounded-full" />
 
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+        <div className="absolute top-24 left-10 w-20 h-20 border border-purple-500/10 rotate-45" />
 
+        <div className="absolute bottom-20 left-1/3 w-28 h-28 border border-cyan-400/10 rounded-full" />
+      </div>
+
+      <div className="max-w-6xl mx-auto relative z-10">
+        {/* HEADER */}
         <motion.div
-          initial={{ opacity: 0, x: -40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className="text-center mb-16"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold gradient-text mb-4 md:mb-6">
-            Let’s build something impactful
+          <p className="text-xs uppercase tracking-[0.35em] text-purple-400/60 mb-4">
+            CONTACT
+          </p>
+
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold gradient-text leading-tight">
+            Let’s create something
+            <br />
+            people actually remember
           </h2>
 
-          <p className="text-gray-300 text-sm sm:text-base mb-4 md:mb-6 leading-relaxed">
-            If you're looking to integrate AI into your product, automate workflows,
-            or build something meaningful let's talk.
+          <p className="max-w-2xl mx-auto text-gray-400 text-sm sm:text-base mt-6 leading-relaxed">
+            AI products. Automation systems. Smart experiences.
+            Or just a crazy idea that sounds impossible at 2AM.
+            I’m interested.
           </p>
-
-          <p className="text-gray-400 text-sm sm:text-base mb-6 md:mb-8">
-            I usually respond within 24 hours.
-          </p>
-
-          <div className="flex flex-col gap-3 sm:gap-4">
-
-            <a
-              href="https://github.com/Himanshu110109"
-              target="_blank"
-              className="flex items-center gap-3 text-gray-300 hover:text-purple-400 transition text-sm sm:text-base"
-            >
-              <FaGithub /> GitHub
-            </a>
-
-            <a
-              href="https://www.linkedin.com/in/himanshu-chandani-9a91b13b7/"
-              target="_blank"
-              className="flex items-center gap-3 text-gray-300 hover:text-purple-400 transition text-sm sm:text-base"
-            >
-              <FaLinkedin /> LinkedIn
-            </a>
-
-            <a
-              href="mailto:himanshu110109@gmail.com"
-              className="flex items-center gap-3 text-gray-300 hover:text-purple-400 transition text-sm sm:text-base"
-            >
-              <FaEnvelope /> Email
-            </a>
-
-          </div>
         </motion.div>
 
-        <motion.form
-          onSubmit={handleSubmit}
-          className="flex flex-col gap-6 sm:gap-8 mt-8 md:mt-0"
-          initial={{ opacity: 0, x: 40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_template" value="table" />
-          <input type="text" name="_honey" style={{ display: "none" }} />
-
-          <div className="flex flex-col">
-            <label className="text-xs sm:text-sm text-gray-400 mb-1 sm:mb-2">Name</label>
-            <input
-              type="text"
-              name="name"
-              required
-              className="bg-transparent border-b border-gray-600 focus:border-purple-400 outline-none py-2 text-sm sm:text-base transition"
-              placeholder="Your name"
-            />
-          </div>
-
-          <div className="flex flex-col">
-            <label className="text-xs sm:text-sm text-gray-400 mb-1 sm:mb-2">Email</label>
-            <input
-              type="email"
-              name="email"
-              required
-              className="bg-transparent border-b border-gray-600 focus:border-purple-400 outline-none py-2 text-sm sm:text-base transition"
-              placeholder="you@email.com"
-            />
-          </div>
-
-          <div className="flex flex-col">
-            <label className="text-xs sm:text-sm text-gray-400 mb-1 sm:mb-2">Message</label>
-            <textarea
-              name="message"
-              required
-              rows="4"
-              className="bg-transparent border-b border-gray-600 focus:border-purple-400 outline-none py-2 text-sm sm:text-base transition resize-none"
-              placeholder="Tell me about your project..."
-            />
-          </div>
-
-          <button
-            type="submit"
-            className="mt-2 sm:mt-4 px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-500 rounded-lg hover:opacity-90 transition text-sm sm:text-base"
+        {/* MAIN GRID */}
+        <div className="grid lg:grid-cols-[1fr_1.1fr] gap-10 items-start">
+          
+          {/* LEFT SIDE */}
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7 }}
+            className="relative"
           >
-            Send Message →
-          </button>
+            <div className="relative overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.03] backdrop-blur-xl p-8 sm:p-10">
 
-        </motion.form>
+              {/* glow */}
+              <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-400/70 to-transparent" />
 
+              <div className="flex items-center gap-4 mb-8">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500/20 to-cyan-500/20 border border-white/10 flex items-center justify-center text-2xl">
+                  ⚡
+                </div>
+
+                <div>
+                  <p className="text-xs uppercase tracking-[0.25em] text-purple-400/60 mb-1">
+                    AVAILABLE FOR WORK
+                  </p>
+
+                  <h3 className="text-xl font-semibold text-white">
+                    Open to projects & collaborations
+                  </h3>
+                </div>
+              </div>
+
+              <p className="text-gray-400 leading-relaxed text-sm sm:text-base mb-10">
+                Whether you're building an AI startup, automating workflows,
+                or crafting the next “why didn’t I think of that” product —
+                let’s make it real.
+              </p>
+
+              {/* SOCIALS */}
+              <div className="space-y-4">
+
+                <a
+                  href="https://github.com/Himanshu110109"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group flex items-center justify-between rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-4 hover:border-purple-500/40 hover:bg-purple-500/10 transition-all duration-300"
+                >
+                  <div className="flex items-center gap-4">
+                    <div className="w-11 h-11 rounded-xl bg-black/30 border border-white/10 flex items-center justify-center text-lg">
+                      <FaGithub />
+                    </div>
+
+                    <div>
+                      <p className="text-white text-sm font-medium">
+                        GitHub
+                      </p>
+
+                      <p className="text-gray-500 text-xs">
+                        Projects & experiments
+                      </p>
+                    </div>
+                  </div>
+
+                  <FaArrowRight className="text-gray-500 group-hover:text-purple-400 transition" />
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/in/himanshu-chandani-9a91b13b7/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group flex items-center justify-between rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-4 hover:border-cyan-500/40 hover:bg-cyan-500/10 transition-all duration-300"
+                >
+                  <div className="flex items-center gap-4">
+                    <div className="w-11 h-11 rounded-xl bg-black/30 border border-white/10 flex items-center justify-center text-lg">
+                      <FaLinkedin />
+                    </div>
+
+                    <div>
+                      <p className="text-white text-sm font-medium">
+                        LinkedIn
+                      </p>
+
+                      <p className="text-gray-500 text-xs">
+                        Professional updates
+                      </p>
+                    </div>
+                  </div>
+
+                  <FaArrowRight className="text-gray-500 group-hover:text-cyan-400 transition" />
+                </a>
+
+                <a
+                  href="mailto:himanshu110109@gmail.com"
+                  className="group flex items-center justify-between rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-4 hover:border-pink-500/40 hover:bg-pink-500/10 transition-all duration-300"
+                >
+                  <div className="flex items-center gap-4">
+                    <div className="w-11 h-11 rounded-xl bg-black/30 border border-white/10 flex items-center justify-center text-lg">
+                      <FaEnvelope />
+                    </div>
+
+                    <div>
+                      <p className="text-white text-sm font-medium">
+                        Email
+                      </p>
+
+                      <p className="text-gray-500 text-xs">
+                        Direct communication
+                      </p>
+                    </div>
+                  </div>
+
+                  <FaArrowRight className="text-gray-500 group-hover:text-pink-400 transition" />
+                </a>
+
+              </div>
+            </div>
+          </motion.div>
+
+          {/* RIGHT SIDE FORM */}
+          <motion.form
+            onSubmit={handleSubmit}
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7 }}
+            className="relative overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.03] backdrop-blur-xl p-8 sm:p-10"
+          >
+            {/* glow */}
+            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400/70 to-transparent" />
+
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="text" name="_honey" style={{ display: "none" }} />
+
+            <div className="mb-10">
+              <p className="text-xs uppercase tracking-[0.25em] text-cyan-400/60 mb-3">
+                START A CONVERSATION
+              </p>
+
+              <h3 className="text-2xl sm:text-3xl font-bold text-white">
+                Tell me what you’re building
+              </h3>
+            </div>
+
+            <div className="space-y-7">
+
+              <div>
+                <label className="text-sm text-gray-400 mb-2 block">
+                  Your Name
+                </label>
+
+                <input
+                  type="text"
+                  name="name"
+                  required
+                  placeholder="John Doe"
+                  className="w-full rounded-2xl border border-white/10 bg-black/20 px-5 py-4 outline-none focus:border-purple-500/50 transition text-sm"
+                />
+              </div>
+
+              <div>
+                <label className="text-sm text-gray-400 mb-2 block">
+                  Email Address
+                </label>
+
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  placeholder="you@example.com"
+                  className="w-full rounded-2xl border border-white/10 bg-black/20 px-5 py-4 outline-none focus:border-cyan-500/50 transition text-sm"
+                />
+              </div>
+
+              <div>
+                <label className="text-sm text-gray-400 mb-2 block">
+                  Project Details
+                </label>
+
+                <textarea
+                  name="message"
+                  required
+                  rows="6"
+                  placeholder="Tell me about your idea..."
+                  className="w-full rounded-2xl border border-white/10 bg-black/20 px-5 py-4 outline-none focus:border-pink-500/50 transition text-sm resize-none"
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="group relative overflow-hidden w-full rounded-2xl py-4 font-medium bg-gradient-to-r from-purple-600 to-blue-500 hover:scale-[1.01] active:scale-[0.99] transition-all duration-300"
+              >
+                <span className="relative z-10 flex items-center justify-center gap-2">
+                  Send Message
+                  <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+                </span>
+
+                <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition" />
+              </button>
+
+            </div>
+          </motion.form>
+        </div>
       </div>
     </section>
   );
