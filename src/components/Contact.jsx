@@ -104,92 +104,104 @@ export default function Contact() {
             {/* SOCIAL STACK */}
             <div className="space-y-5">
 
-              <a
-                href="https://github.com/Himanshu110109"
-                target="_blank"
-                rel="noreferrer"
-                className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-md px-6 py-5 hover:border-purple-500/40 transition-all duration-300"
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-purple-500/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition duration-500" />
+  {/* GITHUB */}
+  <a
+    href="https://github.com/Himanshu110109"
+    target="_blank"
+    rel="noreferrer"
+    className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-md px-5 sm:px-6 py-5 hover:border-purple-500/40 transition-all duration-300"
+  >
+    <div className="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-purple-500/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition duration-500" />
 
-                <div className="relative z-10 flex items-center justify-between">
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-2xl bg-black/30 border border-white/10 flex items-center justify-center text-lg text-purple-300">
-                      <FaGithub />
-                    </div>
+    <div className="relative z-10 flex items-center justify-between gap-4">
 
-                    <div>
-                      <p className="text-white font-medium">
-                        GitHub
-                      </p>
+      <div className="flex items-center gap-4 min-w-0 flex-1">
 
-                      <p className="text-gray-500 text-xs">
-                        Projects & experiments
-                      </p>
-                    </div>
-                  </div>
+        <div className="w-12 h-12 rounded-2xl bg-black/30 border border-white/10 flex items-center justify-center text-lg text-purple-300 shrink-0">
+          <FaGithub />
+        </div>
 
-                  <FaArrowRight className="text-gray-500 group-hover:text-purple-400 group-hover:translate-x-1 transition-all" />
-                </div>
-              </a>
+        <div className="min-w-0">
+          <p className="text-white font-medium truncate">
+            GitHub
+          </p>
 
-              <a
-                href="https://www.linkedin.com/in/himanshu-chandani-9a91b13b7/"
-                target="_blank"
-                rel="noreferrer"
-                className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-md px-6 py-5 hover:border-cyan-500/40 transition-all duration-300"
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/0 via-cyan-500/5 to-blue-500/0 opacity-0 group-hover:opacity-100 transition duration-500" />
+          <p className="text-gray-500 text-xs truncate">
+            Projects & experiments
+          </p>
+        </div>
 
-                <div className="relative z-10 flex items-center justify-between">
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-2xl bg-black/30 border border-white/10 flex items-center justify-center text-lg text-cyan-300">
-                      <FaLinkedin />
-                    </div>
+      </div>
 
-                    <div>
-                      <p className="text-white font-medium">
-                        LinkedIn
-                      </p>
+      <FaArrowRight className="text-gray-500 group-hover:text-purple-400 group-hover:translate-x-1 transition-all shrink-0" />
+    </div>
+  </a>
 
-                      <p className="text-gray-500 text-xs">
-                        Professional updates
-                      </p>
-                    </div>
-                  </div>
+  {/* LINKEDIN */}
+  <a
+    href="https://www.linkedin.com/in/himanshu-chandani-9a91b13b7/"
+    target="_blank"
+    rel="noreferrer"
+    className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-md px-5 sm:px-6 py-5 hover:border-cyan-500/40 transition-all duration-300"
+  >
+    <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/0 via-cyan-500/5 to-blue-500/0 opacity-0 group-hover:opacity-100 transition duration-500" />
 
-                  <FaArrowRight className="text-gray-500 group-hover:text-cyan-400 group-hover:translate-x-1 transition-all" />
-                </div>
-              </a>
+    <div className="relative z-10 flex items-center justify-between gap-4">
 
-              <a
-                href="mailto:himanshu110109@gmail.com"
-                className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-md px-6 py-5 hover:border-pink-500/40 transition-all duration-300"
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-pink-500/0 via-pink-500/5 to-purple-500/0 opacity-0 group-hover:opacity-100 transition duration-500" />
+      <div className="flex items-center gap-4 min-w-0 flex-1">
 
-                <div className="relative z-10 flex items-center justify-between">
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-2xl bg-black/30 border border-white/10 flex items-center justify-center text-lg text-pink-300">
-                      <FaEnvelope />
-                    </div>
+        <div className="w-12 h-12 rounded-2xl bg-black/30 border border-white/10 flex items-center justify-center text-lg text-cyan-300 shrink-0">
+          <FaLinkedin />
+        </div>
 
-                    <div>
-                      <p className="text-white font-medium">
-                        Email
-                      </p>
+        <div className="min-w-0">
+          <p className="text-white font-medium truncate">
+            LinkedIn
+          </p>
 
-                      <p className="text-gray-500 text-xs">
-                        Direct communication
-                      </p>
-                    </div>
-                  </div>
+          <p className="text-gray-500 text-xs truncate">
+            Professional updates
+          </p>
+        </div>
 
-                  <FaArrowRight className="text-gray-500 group-hover:text-pink-400 group-hover:translate-x-1 transition-all" />
-                </div>
-              </a>
+      </div>
 
-            </div>
+      <FaArrowRight className="text-gray-500 group-hover:text-cyan-400 group-hover:translate-x-1 transition-all shrink-0" />
+    </div>
+  </a>
+
+  {/* EMAIL */}
+  <a
+    href="mailto:himanshu110109@gmail.com"
+    className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-md px-5 sm:px-6 py-5 hover:border-pink-500/40 transition-all duration-300"
+  >
+    <div className="absolute inset-0 bg-gradient-to-r from-pink-500/0 via-pink-500/5 to-purple-500/0 opacity-0 group-hover:opacity-100 transition duration-500" />
+
+    <div className="relative z-10 flex items-center justify-between gap-4">
+
+      <div className="flex items-center gap-4 min-w-0 flex-1">
+
+        <div className="w-12 h-12 rounded-2xl bg-black/30 border border-white/10 flex items-center justify-center text-lg text-pink-300 shrink-0">
+          <FaEnvelope />
+        </div>
+
+        <div className="min-w-0">
+          <p className="text-white font-medium truncate">
+            Email
+          </p>
+
+          <p className="text-gray-500 text-xs truncate">
+            Direct communication
+          </p>
+        </div>
+
+      </div>
+
+      <FaArrowRight className="text-gray-500 group-hover:text-pink-400 group-hover:translate-x-1 transition-all shrink-0" />
+    </div>
+  </a>
+
+</div>
           </motion.div>
 
           {/* FORM */}
