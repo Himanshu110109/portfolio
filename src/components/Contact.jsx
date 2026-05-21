@@ -36,19 +36,19 @@ export default function Contact() {
       className="relative py-24 md:py-32 px-4 sm:px-6 overflow-hidden"
     >
       {/* BACKGROUND */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-[-120px] left-1/2 -translate-x-1/2 w-[750px] h-[750px] bg-purple-600/10 blur-[160px] rounded-full" />
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-[-180px] left-1/2 -translate-x-1/2 w-[850px] h-[850px] bg-purple-600/10 blur-[180px] rounded-full" />
 
-        <div className="absolute bottom-[-100px] right-[-100px] w-[350px] h-[350px] bg-cyan-500/10 blur-[130px] rounded-full" />
+        <div className="absolute bottom-[-120px] right-[-100px] w-[420px] h-[420px] bg-cyan-500/10 blur-[140px] rounded-full" />
 
-        <div className="absolute top-32 left-12 w-24 h-24 border border-purple-500/10 rotate-45" />
+        <div className="absolute top-36 left-10 w-24 h-24 border border-purple-500/10 rotate-45" />
 
-        <div className="absolute bottom-24 left-1/3 w-32 h-32 border border-cyan-400/10 rounded-full" />
+        <div className="absolute bottom-20 left-1/3 w-32 h-32 border border-cyan-400/10 rounded-full" />
       </div>
 
-      <div className="max-w-6xl mx-auto relative z-10">
-        
-        {/* TOP HEADING */}
+      <div className="max-w-7xl mx-auto relative z-10">
+
+        {/* HEADER */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -59,7 +59,7 @@ export default function Contact() {
             CONTACT
           </p>
 
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.1] gradient-text">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.05] gradient-text">
             Let’s build
             <br />
             something impactful
@@ -72,17 +72,17 @@ export default function Contact() {
         </motion.div>
 
         {/* MAIN GRID */}
-        <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-12 lg:gap-20 items-start">
+        <div className="grid lg:grid-cols-[1.05fr_1fr] gap-14 lg:gap-16 items-start">
 
-          {/* LEFT */}
+          {/* LEFT SIDE */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
-            className="relative"
+            className="relative w-full min-w-0"
           >
             {/* STATUS */}
-            <div className="mb-10">
+            <div className="mb-12">
               <div className="flex items-center gap-3 mb-5">
                 <div className="relative flex h-3 w-3">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
@@ -94,114 +94,105 @@ export default function Contact() {
                 </p>
               </div>
 
-              <p className="text-gray-400 leading-relaxed text-sm sm:text-base max-w-md">
+              <p className="text-gray-400 leading-relaxed text-sm sm:text-base max-w-lg">
                 If you're building something ambitious with AI,
                 automation, or modern web tech —
                 I’d love to hear about it.
               </p>
             </div>
 
-            {/* SOCIAL STACK */}
-            <div className="space-y-5">
+            {/* SOCIALS */}
+            <div className="space-y-5 w-full">
 
-  {/* GITHUB */}
-  <a
-    href="https://github.com/Himanshu110109"
-    target="_blank"
-    rel="noreferrer"
-    className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-md px-5 sm:px-6 py-5 hover:border-purple-500/40 transition-all duration-300"
-  >
-    <div className="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-purple-500/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition duration-500" />
+              {/* GITHUB */}
+              <a
+                href="https://github.com/Himanshu110109"
+                target="_blank"
+                rel="noreferrer"
+                className="group relative flex items-center justify-between gap-4 overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-md px-5 sm:px-6 py-5 hover:border-purple-500/40 transition-all duration-300 w-full"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-purple-500/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition duration-500" />
 
-    <div className="relative z-10 flex items-center justify-between gap-4">
+                <div className="relative z-10 flex items-center gap-4 flex-1 min-w-0">
 
-      <div className="flex items-center gap-4 min-w-0 flex-1">
+                  <div className="w-12 h-12 rounded-2xl bg-black/30 border border-white/10 flex items-center justify-center text-lg text-purple-300 shrink-0">
+                    <FaGithub />
+                  </div>
 
-        <div className="w-12 h-12 rounded-2xl bg-black/30 border border-white/10 flex items-center justify-center text-lg text-purple-300 shrink-0">
-          <FaGithub />
-        </div>
+                  <div className="min-w-0">
+                    <p className="text-white font-medium truncate">
+                      GitHub
+                    </p>
 
-        <div className="min-w-0">
-          <p className="text-white font-medium truncate">
-            GitHub
-          </p>
+                    <p className="text-gray-500 text-xs truncate">
+                      Projects & experiments
+                    </p>
+                  </div>
 
-          <p className="text-gray-500 text-xs truncate">
-            Projects & experiments
-          </p>
-        </div>
+                </div>
 
-      </div>
+                <FaArrowRight className="relative z-10 text-gray-500 group-hover:text-purple-400 group-hover:translate-x-1 transition-all shrink-0" />
+              </a>
 
-      <FaArrowRight className="text-gray-500 group-hover:text-purple-400 group-hover:translate-x-1 transition-all shrink-0" />
-    </div>
-  </a>
+              {/* LINKEDIN */}
+              <a
+                href="https://www.linkedin.com/in/himanshu-chandani-9a91b13b7/"
+                target="_blank"
+                rel="noreferrer"
+                className="group relative flex items-center justify-between gap-4 overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-md px-5 sm:px-6 py-5 hover:border-cyan-500/40 transition-all duration-300 w-full"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/0 via-cyan-500/5 to-blue-500/0 opacity-0 group-hover:opacity-100 transition duration-500" />
 
-  {/* LINKEDIN */}
-  <a
-    href="https://www.linkedin.com/in/himanshu-chandani-9a91b13b7/"
-    target="_blank"
-    rel="noreferrer"
-    className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-md px-5 sm:px-6 py-5 hover:border-cyan-500/40 transition-all duration-300"
-  >
-    <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/0 via-cyan-500/5 to-blue-500/0 opacity-0 group-hover:opacity-100 transition duration-500" />
+                <div className="relative z-10 flex items-center gap-4 flex-1 min-w-0">
 
-    <div className="relative z-10 flex items-center justify-between gap-4">
+                  <div className="w-12 h-12 rounded-2xl bg-black/30 border border-white/10 flex items-center justify-center text-lg text-cyan-300 shrink-0">
+                    <FaLinkedin />
+                  </div>
 
-      <div className="flex items-center gap-4 min-w-0 flex-1">
+                  <div className="min-w-0">
+                    <p className="text-white font-medium truncate">
+                      LinkedIn
+                    </p>
 
-        <div className="w-12 h-12 rounded-2xl bg-black/30 border border-white/10 flex items-center justify-center text-lg text-cyan-300 shrink-0">
-          <FaLinkedin />
-        </div>
+                    <p className="text-gray-500 text-xs truncate">
+                      Professional updates
+                    </p>
+                  </div>
 
-        <div className="min-w-0">
-          <p className="text-white font-medium truncate">
-            LinkedIn
-          </p>
+                </div>
 
-          <p className="text-gray-500 text-xs truncate">
-            Professional updates
-          </p>
-        </div>
+                <FaArrowRight className="relative z-10 text-gray-500 group-hover:text-cyan-400 group-hover:translate-x-1 transition-all shrink-0" />
+              </a>
 
-      </div>
+              {/* EMAIL */}
+              <a
+                href="mailto:himanshu110109@gmail.com"
+                className="group relative flex items-center justify-between gap-4 overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-md px-5 sm:px-6 py-5 hover:border-pink-500/40 transition-all duration-300 w-full"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-pink-500/0 via-pink-500/5 to-purple-500/0 opacity-0 group-hover:opacity-100 transition duration-500" />
 
-      <FaArrowRight className="text-gray-500 group-hover:text-cyan-400 group-hover:translate-x-1 transition-all shrink-0" />
-    </div>
-  </a>
+                <div className="relative z-10 flex items-center gap-4 flex-1 min-w-0">
 
-  {/* EMAIL */}
-  <a
-    href="mailto:himanshu110109@gmail.com"
-    className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-md px-5 sm:px-6 py-5 hover:border-pink-500/40 transition-all duration-300"
-  >
-    <div className="absolute inset-0 bg-gradient-to-r from-pink-500/0 via-pink-500/5 to-purple-500/0 opacity-0 group-hover:opacity-100 transition duration-500" />
+                  <div className="w-12 h-12 rounded-2xl bg-black/30 border border-white/10 flex items-center justify-center text-lg text-pink-300 shrink-0">
+                    <FaEnvelope />
+                  </div>
 
-    <div className="relative z-10 flex items-center justify-between gap-4">
+                  <div className="min-w-0">
+                    <p className="text-white font-medium truncate">
+                      Email
+                    </p>
 
-      <div className="flex items-center gap-4 min-w-0 flex-1">
+                    <p className="text-gray-500 text-xs truncate">
+                      Direct communication
+                    </p>
+                  </div>
 
-        <div className="w-12 h-12 rounded-2xl bg-black/30 border border-white/10 flex items-center justify-center text-lg text-pink-300 shrink-0">
-          <FaEnvelope />
-        </div>
+                </div>
 
-        <div className="min-w-0">
-          <p className="text-white font-medium truncate">
-            Email
-          </p>
+                <FaArrowRight className="relative z-10 text-gray-500 group-hover:text-pink-400 group-hover:translate-x-1 transition-all shrink-0" />
+              </a>
 
-          <p className="text-gray-500 text-xs truncate">
-            Direct communication
-          </p>
-        </div>
-
-      </div>
-
-      <FaArrowRight className="text-gray-500 group-hover:text-pink-400 group-hover:translate-x-1 transition-all shrink-0" />
-    </div>
-  </a>
-
-</div>
+            </div>
           </motion.div>
 
           {/* FORM */}
