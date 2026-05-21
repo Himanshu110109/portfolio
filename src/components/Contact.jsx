@@ -72,7 +72,7 @@ export default function Contact() {
         </motion.div>
 
         {/* MAIN GRID */}
-        <div className="grid lg:grid-cols-[1fr_1.1fr] gap-10 items-start">
+        <div className="grid lg:grid-cols-[1fr_1.1fr] gap-14 items-start">
           
           {/* LEFT SIDE */}
           <motion.div
@@ -81,11 +81,7 @@ export default function Contact() {
             transition={{ duration: 0.7 }}
             className="relative"
           >
-            <div className="relative overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.03] backdrop-blur-xl p-8 sm:p-10">
-
-              {/* glow */}
-              <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-400/70 to-transparent" />
-
+            <div className="mb-10">
               <div className="flex items-center gap-4 mb-8">
                 <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500/20 to-cyan-500/20 border border-white/10 flex items-center justify-center text-2xl">
                   ⚡
@@ -102,89 +98,89 @@ export default function Contact() {
                 </div>
               </div>
 
-              <p className="text-gray-400 leading-relaxed text-sm sm:text-base mb-10">
+              <p className="text-gray-400 leading-relaxed text-sm sm:text-base max-w-md">
                 Whether you're building an AI startup, automating workflows,
                 or crafting the next “why didn’t I think of that” product —
                 let’s make it real.
               </p>
+            </div>
 
-              {/* SOCIALS */}
-              <div className="space-y-4">
+            {/* SOCIALS */}
+            <div className="space-y-5">
 
-                <a
-                  href="https://github.com/Himanshu110109"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="group flex items-center justify-between rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-4 hover:border-purple-500/40 hover:bg-purple-500/10 transition-all duration-300"
-                >
-                  <div className="flex items-center gap-4">
-                    <div className="w-11 h-11 rounded-xl bg-black/30 border border-white/10 flex items-center justify-center text-lg">
-                      <FaGithub />
-                    </div>
-
-                    <div>
-                      <p className="text-white text-sm font-medium">
-                        GitHub
-                      </p>
-
-                      <p className="text-gray-500 text-xs">
-                        Projects & experiments
-                      </p>
-                    </div>
+              <a
+                href="https://github.com/Himanshu110109"
+                target="_blank"
+                rel="noreferrer"
+                className="group flex items-center justify-between border-b border-white/10 pb-4 hover:border-purple-500/40 transition-all duration-300"
+              >
+                <div className="flex items-center gap-4">
+                  <div className="text-xl text-gray-300 group-hover:text-purple-400 transition">
+                    <FaGithub />
                   </div>
 
-                  <FaArrowRight className="text-gray-500 group-hover:text-purple-400 transition" />
-                </a>
+                  <div>
+                    <p className="text-white text-sm font-medium">
+                      GitHub
+                    </p>
 
-                <a
-                  href="https://www.linkedin.com/in/himanshu-chandani-9a91b13b7/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="group flex items-center justify-between rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-4 hover:border-cyan-500/40 hover:bg-cyan-500/10 transition-all duration-300"
-                >
-                  <div className="flex items-center gap-4">
-                    <div className="w-11 h-11 rounded-xl bg-black/30 border border-white/10 flex items-center justify-center text-lg">
-                      <FaLinkedin />
-                    </div>
+                    <p className="text-gray-500 text-xs">
+                      Projects & experiments
+                    </p>
+                  </div>
+                </div>
 
-                    <div>
-                      <p className="text-white text-sm font-medium">
-                        LinkedIn
-                      </p>
+                <FaArrowRight className="text-gray-500 group-hover:text-purple-400 group-hover:translate-x-1 transition-all" />
+              </a>
 
-                      <p className="text-gray-500 text-xs">
-                        Professional updates
-                      </p>
-                    </div>
+              <a
+                href="https://www.linkedin.com/in/himanshu-chandani-9a91b13b7/"
+                target="_blank"
+                rel="noreferrer"
+                className="group flex items-center justify-between border-b border-white/10 pb-4 hover:border-cyan-500/40 transition-all duration-300"
+              >
+                <div className="flex items-center gap-4">
+                  <div className="text-xl text-gray-300 group-hover:text-cyan-400 transition">
+                    <FaLinkedin />
                   </div>
 
-                  <FaArrowRight className="text-gray-500 group-hover:text-cyan-400 transition" />
-                </a>
+                  <div>
+                    <p className="text-white text-sm font-medium">
+                      LinkedIn
+                    </p>
 
-                <a
-                  href="mailto:himanshu110109@gmail.com"
-                  className="group flex items-center justify-between rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-4 hover:border-pink-500/40 hover:bg-pink-500/10 transition-all duration-300"
-                >
-                  <div className="flex items-center gap-4">
-                    <div className="w-11 h-11 rounded-xl bg-black/30 border border-white/10 flex items-center justify-center text-lg">
-                      <FaEnvelope />
-                    </div>
+                    <p className="text-gray-500 text-xs">
+                      Professional updates
+                    </p>
+                  </div>
+                </div>
 
-                    <div>
-                      <p className="text-white text-sm font-medium">
-                        Email
-                      </p>
+                <FaArrowRight className="text-gray-500 group-hover:text-cyan-400 group-hover:translate-x-1 transition-all" />
+              </a>
 
-                      <p className="text-gray-500 text-xs">
-                        Direct communication
-                      </p>
-                    </div>
+              <a
+                href="mailto:himanshu110109@gmail.com"
+                className="group flex items-center justify-between border-b border-white/10 pb-4 hover:border-pink-500/40 transition-all duration-300"
+              >
+                <div className="flex items-center gap-4">
+                  <div className="text-xl text-gray-300 group-hover:text-pink-400 transition">
+                    <FaEnvelope />
                   </div>
 
-                  <FaArrowRight className="text-gray-500 group-hover:text-pink-400 transition" />
-                </a>
+                  <div>
+                    <p className="text-white text-sm font-medium">
+                      Email
+                    </p>
 
-              </div>
+                    <p className="text-gray-500 text-xs">
+                      Direct communication
+                    </p>
+                  </div>
+                </div>
+
+                <FaArrowRight className="text-gray-500 group-hover:text-pink-400 group-hover:translate-x-1 transition-all" />
+              </a>
+
             </div>
           </motion.div>
 
@@ -194,11 +190,8 @@ export default function Contact() {
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
-            className="relative overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.03] backdrop-blur-xl p-8 sm:p-10"
+            className="relative"
           >
-            {/* glow */}
-            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400/70 to-transparent" />
-
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_template" value="table" />
             <input type="text" name="_honey" style={{ display: "none" }} />
@@ -213,10 +206,10 @@ export default function Contact() {
               </h3>
             </div>
 
-            <div className="space-y-7">
+            <div className="space-y-8">
 
               <div>
-                <label className="text-sm text-gray-400 mb-2 block">
+                <label className="text-sm text-gray-400 mb-3 block">
                   Your Name
                 </label>
 
@@ -225,12 +218,12 @@ export default function Contact() {
                   name="name"
                   required
                   placeholder="John Doe"
-                  className="w-full rounded-2xl border border-white/10 bg-black/20 px-5 py-4 outline-none focus:border-purple-500/50 transition text-sm"
+                  className="w-full bg-transparent border-b border-white/10 py-4 outline-none focus:border-purple-500/50 transition text-sm"
                 />
               </div>
 
               <div>
-                <label className="text-sm text-gray-400 mb-2 block">
+                <label className="text-sm text-gray-400 mb-3 block">
                   Email Address
                 </label>
 
@@ -239,29 +232,29 @@ export default function Contact() {
                   name="email"
                   required
                   placeholder="you@example.com"
-                  className="w-full rounded-2xl border border-white/10 bg-black/20 px-5 py-4 outline-none focus:border-cyan-500/50 transition text-sm"
+                  className="w-full bg-transparent border-b border-white/10 py-4 outline-none focus:border-cyan-500/50 transition text-sm"
                 />
               </div>
 
               <div>
-                <label className="text-sm text-gray-400 mb-2 block">
+                <label className="text-sm text-gray-400 mb-3 block">
                   Project Details
                 </label>
 
                 <textarea
                   name="message"
                   required
-                  rows="6"
+                  rows="5"
                   placeholder="Tell me about your idea..."
-                  className="w-full rounded-2xl border border-white/10 bg-black/20 px-5 py-4 outline-none focus:border-pink-500/50 transition text-sm resize-none"
+                  className="w-full bg-transparent border-b border-white/10 py-4 outline-none focus:border-pink-500/50 transition text-sm resize-none"
                 />
               </div>
 
               <button
                 type="submit"
-                className="group relative overflow-hidden w-full rounded-2xl py-4 font-medium bg-gradient-to-r from-purple-600 to-blue-500 hover:scale-[1.01] active:scale-[0.99] transition-all duration-300"
+                className="group relative overflow-hidden mt-6 px-8 py-4 rounded-full bg-gradient-to-r from-purple-600 to-blue-500 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 text-sm font-medium"
               >
-                <span className="relative z-10 flex items-center justify-center gap-2">
+                <span className="relative z-10 flex items-center gap-2">
                   Send Message
                   <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                 </span>
