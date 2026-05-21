@@ -96,7 +96,7 @@ export default function Contact() {
 
               <p className="text-gray-400 leading-relaxed text-sm sm:text-base max-w-lg">
                 If you're building something ambitious with AI,
-                automation, or modern web tech —
+                automation, or modern web tech
                 I’d love to hear about it.
               </p>
             </div>
