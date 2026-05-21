@@ -56,41 +56,13 @@ export default function Hero() {
 
       <div className="relative z-10 max-w-3xl">
         <motion.h1
-  className="text-3xl sm:text-4xl md:text-6xl font-bold gradient-text leading-tight relative"
-  initial={{ opacity: 0, y: 60 }}
-  animate={{ opacity: 1, y: 0 }}
->
-  {/* AI GENERATING EFFECT */}
-  <motion.span
-    initial={{ width: 0 }}
-    animate={{ width: "100%" }}
-    transition={{ duration: 2, ease: "easeInOut" }}
-    className="absolute inset-0 bg-black z-10"
-  />
-
-  <motion.span
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    transition={{ duration: 0.3, delay: 0.2 }}
-    className="relative"
-  >
-    I build AI systems
-    <br className="hidden sm:block" />
-    that automate workflows
-  </motion.span>
-
-  {/* BLINKING CURSOR */}
-  <motion.span
-    className="inline-block ml-1 text-purple-400"
-    animate={{ opacity: [1, 0, 1] }}
-    transition={{
-      repeat: Infinity,
-      duration: 0.8,
-    }}
-  >
-    |
-  </motion.span>
-</motion.h1>
+          className="text-3xl sm:text-4xl md:text-6xl font-bold gradient-text leading-tight"
+          initial={{ opacity: 0, y: 60 }}
+          animate={{ opacity: 1, y: 0 }}
+        >
+          I build AI systems <br className="hidden sm:block" />
+          that automate workflows
+        </motion.h1>
 
         <motion.p
           className="mt-4 md:mt-6 text-gray-400 text-sm sm:text-base md:text-lg px-2 sm:px-0"
