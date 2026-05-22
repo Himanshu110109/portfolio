@@ -24,7 +24,7 @@ export default function Hero() {
       <div className="relative z-10 w-full max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
 
         {/* LEFT SIDE */}
-        <div>
+        <div className="text-center md:text-left flex flex-col items-center md:items-start">
 
           {/* Badge */}
           <motion.div
@@ -39,7 +39,7 @@ export default function Hero() {
 
           {/* Main Heading */}
           <motion.h1
-            className="text-5xl sm:text-6xl md:text-7xl font-black leading-[0.95] tracking-tight"
+            className="text-5xl sm:text-6xl md:text-7xl font-black leading-[0.95] tracking-tight text-center md:text-left"
             initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
           >
@@ -74,7 +74,7 @@ export default function Hero() {
 
           {/* Description */}
           <motion.p
-            className="mt-8 text-gray-400 text-lg max-w-xl leading-relaxed"
+            className="mt-8 text-gray-400 text-lg max-w-xl leading-relaxed text-center md:text-left"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
@@ -86,7 +86,7 @@ export default function Hero() {
 
           {/* Buttons */}
           <motion.div
-            className="flex flex-col sm:flex-row gap-4 mt-10"
+            className="flex flex-col sm:flex-row gap-4 mt-10 w-full sm:w-auto"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
