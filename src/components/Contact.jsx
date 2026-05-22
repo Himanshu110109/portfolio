@@ -33,7 +33,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative py-24 md:py-32 px-4 sm:px-6 overflow-hidden"
+      className="relative py-16 md:py-24 px-4 sm:px-6 overflow-hidden"
     >
       {/* BACKGROUND */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -53,7 +53,7 @@ export default function Contact() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="text-center mb-20"
+          className="text-center mb-12 md:mb-16"
         >
           <p className="text-xs uppercase tracking-[0.35em] text-purple-400/60 mb-4">
             CONTACT
@@ -65,14 +65,14 @@ export default function Contact() {
             something impactful
           </h2>
 
-          <p className="max-w-2xl mx-auto text-gray-400 text-sm sm:text-base mt-6 leading-relaxed">
+          <p className="max-w-2xl mx-auto text-gray-400 text-sm sm:text-base mt-5 leading-relaxed">
             AI products. Automation systems. Creative tools.
             Or just an idea too interesting to ignore.
           </p>
         </motion.div>
 
         {/* MAIN GRID */}
-        <div className="grid lg:grid-cols-[1.05fr_1fr] gap-14 lg:gap-16 items-start">
+        <div className="grid lg:grid-cols-[1.05fr_1fr] gap-10 lg:gap-12 items-start">
 
           {/* LEFT SIDE */}
           <motion.div
@@ -81,9 +81,10 @@ export default function Contact() {
             transition={{ duration: 0.7 }}
             className="relative w-full min-w-0"
           >
+
             {/* STATUS */}
-            <div className="mb-12">
-              <div className="flex items-center gap-3 mb-5">
+            <div className="mb-8">
+              <div className="flex items-center gap-3 mb-4">
                 <div className="relative flex h-3 w-3">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
                   <span className="relative inline-flex rounded-full h-3 w-3 bg-green-400" />
@@ -109,13 +110,13 @@ export default function Contact() {
                 href="https://github.com/Himanshu110109"
                 target="_blank"
                 rel="noreferrer"
-                className="group relative flex items-center justify-between gap-4 overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-md px-5 sm:px-6 py-5 hover:border-purple-500/40 transition-all duration-300 w-full"
+                className="group relative flex items-center justify-between gap-4 overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-md px-5 sm:px-6 py-4 hover:border-purple-500/40 transition-all duration-300 w-full"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-purple-500/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition duration-500" />
 
                 <div className="relative z-10 flex items-center gap-4 flex-1 min-w-0">
 
-                  <div className="w-12 h-12 rounded-2xl bg-black/30 border border-white/10 flex items-center justify-center text-lg text-purple-300 shrink-0">
+                  <div className="w-11 h-11 rounded-2xl bg-black/30 border border-white/10 flex items-center justify-center text-lg text-purple-300 shrink-0">
                     <FaGithub />
                   </div>
 
@@ -128,7 +129,6 @@ export default function Contact() {
                       Projects & experiments
                     </p>
                   </div>
-
                 </div>
 
                 <FaArrowRight className="relative z-10 text-gray-500 group-hover:text-purple-400 group-hover:translate-x-1 transition-all shrink-0" />
@@ -139,13 +139,13 @@ export default function Contact() {
                 href="https://www.linkedin.com/in/himanshu-chandani-9a91b13b7/"
                 target="_blank"
                 rel="noreferrer"
-                className="group relative flex items-center justify-between gap-4 overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-md px-5 sm:px-6 py-5 hover:border-cyan-500/40 transition-all duration-300 w-full"
+                className="group relative flex items-center justify-between gap-4 overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-md px-5 sm:px-6 py-4 hover:border-cyan-500/40 transition-all duration-300 w-full"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/0 via-cyan-500/5 to-blue-500/0 opacity-0 group-hover:opacity-100 transition duration-500" />
 
                 <div className="relative z-10 flex items-center gap-4 flex-1 min-w-0">
 
-                  <div className="w-12 h-12 rounded-2xl bg-black/30 border border-white/10 flex items-center justify-center text-lg text-cyan-300 shrink-0">
+                  <div className="w-11 h-11 rounded-2xl bg-black/30 border border-white/10 flex items-center justify-center text-lg text-cyan-300 shrink-0">
                     <FaLinkedin />
                   </div>
 
@@ -158,7 +158,6 @@ export default function Contact() {
                       Professional updates
                     </p>
                   </div>
-
                 </div>
 
                 <FaArrowRight className="relative z-10 text-gray-500 group-hover:text-cyan-400 group-hover:translate-x-1 transition-all shrink-0" />
@@ -167,13 +166,13 @@ export default function Contact() {
               {/* EMAIL */}
               <a
                 href="mailto:himanshu110109@gmail.com"
-                className="group relative flex items-center justify-between gap-4 overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-md px-5 sm:px-6 py-5 hover:border-pink-500/40 transition-all duration-300 w-full"
+                className="group relative flex items-center justify-between gap-4 overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-md px-5 sm:px-6 py-4 hover:border-pink-500/40 transition-all duration-300 w-full"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-pink-500/0 via-pink-500/5 to-purple-500/0 opacity-0 group-hover:opacity-100 transition duration-500" />
 
                 <div className="relative z-10 flex items-center gap-4 flex-1 min-w-0">
 
-                  <div className="w-12 h-12 rounded-2xl bg-black/30 border border-white/10 flex items-center justify-center text-lg text-pink-300 shrink-0">
+                  <div className="w-11 h-11 rounded-2xl bg-black/30 border border-white/10 flex items-center justify-center text-lg text-pink-300 shrink-0">
                     <FaEnvelope />
                   </div>
 
@@ -186,12 +185,10 @@ export default function Contact() {
                       Direct communication
                     </p>
                   </div>
-
                 </div>
 
                 <FaArrowRight className="relative z-10 text-gray-500 group-hover:text-pink-400 group-hover:translate-x-1 transition-all shrink-0" />
               </a>
-
             </div>
           </motion.div>
 
@@ -201,8 +198,9 @@ export default function Contact() {
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
-            className="relative rounded-[32px] border border-white/10 bg-white/[0.03] backdrop-blur-xl p-7 sm:p-10 overflow-hidden"
+            className="relative rounded-[32px] border border-white/10 bg-white/[0.03] backdrop-blur-xl p-6 sm:p-8 overflow-hidden"
           >
+
             {/* GLOW */}
             <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400/70 to-transparent" />
 
@@ -212,7 +210,8 @@ export default function Contact() {
             <input type="hidden" name="_template" value="table" />
             <input type="text" name="_honey" style={{ display: "none" }} />
 
-            <div className="mb-10 relative z-10">
+            {/* FORM HEADER */}
+            <div className="mb-7 relative z-10">
               <p className="text-xs uppercase tracking-[0.3em] text-cyan-400/60 mb-3">
                 START A CONVERSATION
               </p>
@@ -224,10 +223,11 @@ export default function Contact() {
               </h3>
             </div>
 
-            <div className="space-y-7 relative z-10">
+            {/* INPUTS */}
+            <div className="space-y-5 relative z-10">
 
               <div>
-                <label className="text-sm text-gray-400 mb-3 block">
+                <label className="text-sm text-gray-400 mb-2 block">
                   Your Name
                 </label>
 
@@ -236,12 +236,12 @@ export default function Contact() {
                   name="name"
                   required
                   placeholder="John Doe"
-                  className="w-full rounded-2xl border border-white/10 bg-black/20 px-5 py-4 outline-none focus:border-purple-500/50 transition text-sm"
+                  className="w-full rounded-2xl border border-white/10 bg-black/20 px-5 py-3.5 outline-none focus:border-purple-500/50 transition text-sm"
                 />
               </div>
 
               <div>
-                <label className="text-sm text-gray-400 mb-3 block">
+                <label className="text-sm text-gray-400 mb-2 block">
                   Email Address
                 </label>
 
@@ -250,19 +250,19 @@ export default function Contact() {
                   name="email"
                   required
                   placeholder="you@example.com"
-                  className="w-full rounded-2xl border border-white/10 bg-black/20 px-5 py-4 outline-none focus:border-cyan-500/50 transition text-sm"
+                  className="w-full rounded-2xl border border-white/10 bg-black/20 px-5 py-3.5 outline-none focus:border-cyan-500/50 transition text-sm"
                 />
               </div>
 
               <div>
-                <label className="text-sm text-gray-400 mb-3 block">
+                <label className="text-sm text-gray-400 mb-2 block">
                   Project Details
                 </label>
 
                 <textarea
                   name="message"
                   required
-                  rows="5"
+                  rows="4"
                   placeholder="Tell me about your idea..."
                   className="w-full rounded-2xl border border-white/10 bg-black/20 px-5 py-4 outline-none focus:border-pink-500/50 transition text-sm resize-none"
                 />
@@ -270,7 +270,7 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="group relative overflow-hidden w-full rounded-2xl py-4 font-medium bg-gradient-to-r from-purple-600 to-blue-500 hover:scale-[1.01] active:scale-[0.99] transition-all duration-300"
+                className="group relative overflow-hidden w-full rounded-2xl py-3.5 font-medium bg-gradient-to-r from-purple-600 to-blue-500 hover:scale-[1.01] active:scale-[0.99] transition-all duration-300"
               >
                 <span className="relative z-10 flex items-center justify-center gap-2">
                   Send Message
@@ -279,7 +279,6 @@ export default function Contact() {
 
                 <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition" />
               </button>
-
             </div>
           </motion.form>
         </div>
