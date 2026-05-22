@@ -37,28 +37,40 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* Heading */}
-          <motion.h1
-            className="text-5xl sm:text-6xl md:text-7xl font-bold leading-[1.05]"
-            initial={{ opacity: 0, y: 60 }}
-            animate={{ opacity: 1, y: 0 }}
-          >
-            <span className="gradient-text">
-              AI Systems
-            </span>
+         {/* Heading */}
+<motion.h1
+  className="text-5xl sm:text-6xl md:text-7xl font-black leading-[0.95] tracking-tight"
+  initial={{ opacity: 0, y: 60 }}
+  animate={{ opacity: 1, y: 0 }}
+>
+  <span
+    className="gradient-text block"
+    style={{
+      fontFamily: "'Bebas Neue', sans-serif",
+      letterSpacing: "0.04em",
+    }}
+  >
+    AI SYSTEMS
+  </span>
 
-            <br />
+  <span
+    className="text-white block"
+    style={{
+      fontFamily: "'Clash Display', sans-serif",
+    }}
+  >
+    BUILT FOR
+  </span>
 
-            <span className="text-white">
-              Built For
-            </span>
-
-            <br />
-
-            <span className="text-gray-400">
-              Real Automation
-            </span>
-          </motion.h1>
+  <span
+    className="text-gray-400 block"
+    style={{
+      fontFamily: "'Clash Display', sans-serif",
+    }}
+  >
+    AUTOMATION
+  </span>
+</motion.h1>
 
           {/* Description */}
           <motion.p
@@ -101,30 +113,6 @@ export default function Hero() {
               Hire Me
             </button>
           </motion.div>
-
-          {/* Bottom Stats */}
-          <motion.div
-            className="flex gap-10 mt-14"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.6 }}
-          >
-            <div>
-              <h3 className="text-3xl font-bold gradient-text">10+</h3>
-              <p className="text-gray-500 text-sm">AI Projects</p>
-            </div>
-
-            <div>
-              <h3 className="text-3xl font-bold gradient-text">24/7</h3>
-              <p className="text-gray-500 text-sm">Automation</p>
-            </div>
-
-            <div>
-              <h3 className="text-3xl font-bold gradient-text">LLM</h3>
-              <p className="text-gray-500 text-sm">Powered Apps</p>
-            </div>
-          </motion.div>
-        </div>
 
         {/* RIGHT SIDE */}
         <motion.div
