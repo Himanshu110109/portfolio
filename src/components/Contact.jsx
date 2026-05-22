@@ -102,8 +102,8 @@ export default function Contact() {
               </p>
             </div>
 
-            {/* SOCIALS */}
-            <div className="space-y-5 w-full">
+            {/* SOCIALS DESKTOP */}
+            <div className="hidden sm:flex flex-col space-y-5 w-full">
 
               {/* GITHUB */}
               <a
@@ -188,6 +188,35 @@ export default function Contact() {
                 </div>
 
                 <FaArrowRight className="relative z-10 text-gray-500 group-hover:text-pink-400 group-hover:translate-x-1 transition-all shrink-0" />
+              </a>
+            </div>
+
+            {/* SOCIALS MOBILE */}
+            <div className="flex sm:hidden items-center justify-center gap-4 mt-8">
+
+              <a
+                href="https://github.com/Himanshu110109"
+                target="_blank"
+                rel="noreferrer"
+                className="w-14 h-14 rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-md flex items-center justify-center text-purple-300 text-xl"
+              >
+                <FaGithub />
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/himanshu-chandani-9a91b13b7/"
+                target="_blank"
+                rel="noreferrer"
+                className="w-14 h-14 rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-md flex items-center justify-center text-cyan-300 text-xl"
+              >
+                <FaLinkedin />
+              </a>
+
+              <a
+                href="mailto:himanshu110109@gmail.com"
+                className="w-14 h-14 rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-md flex items-center justify-center text-pink-300 text-xl"
+              >
+                <FaEnvelope />
               </a>
             </div>
           </motion.div>
