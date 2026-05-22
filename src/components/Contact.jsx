@@ -53,7 +53,7 @@ export default function Contact() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="text-center mb-12 md:mb-16"
+          className="text-center mb-12 md:mb-16 px-2"
         >
           <p className="text-xs uppercase tracking-[0.35em] text-purple-400/60 mb-4">
             CONTACT
@@ -65,7 +65,7 @@ export default function Contact() {
             something impactful
           </h2>
 
-          <p className="max-w-2xl mx-auto text-gray-400 text-sm sm:text-base mt-5 leading-relaxed">
+          <p className="max-w-xl mx-auto text-gray-400 text-sm sm:text-base mt-5 leading-relaxed text-center">
             AI products. Automation systems. Creative tools.
             Or just an idea too interesting to ignore.
           </p>
@@ -79,12 +79,12 @@ export default function Contact() {
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
-            className="relative w-full min-w-0"
+            className="relative w-full min-w-0 flex flex-col items-center lg:items-start text-center lg:text-left"
           >
 
             {/* STATUS */}
-            <div className="mb-8">
-              <div className="flex items-center gap-3 mb-4">
+            <div className="mb-8 flex flex-col items-center lg:items-start">
+              <div className="flex items-center gap-3 mb-4 justify-center lg:justify-start">
                 <div className="relative flex h-3 w-3">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
                   <span className="relative inline-flex rounded-full h-3 w-3 bg-green-400" />
@@ -95,9 +95,9 @@ export default function Contact() {
                 </p>
               </div>
 
-              <p className="text-gray-400 leading-relaxed text-sm sm:text-base max-w-lg">
+              <p className="text-gray-400 leading-relaxed text-sm sm:text-base max-w-md text-center lg:text-left">
                 If you're building something ambitious with AI,
-                automation, or modern web tech
+                automation, or modern web tech,
                 I’d love to hear about it.
               </p>
             </div>
@@ -120,7 +120,7 @@ export default function Contact() {
                     <FaGithub />
                   </div>
 
-                  <div className="min-w-0">
+                  <div className="min-w-0 text-left">
                     <p className="text-white font-medium truncate">
                       GitHub
                     </p>
@@ -149,7 +149,7 @@ export default function Contact() {
                     <FaLinkedin />
                   </div>
 
-                  <div className="min-w-0">
+                  <div className="min-w-0 text-left">
                     <p className="text-white font-medium truncate">
                       LinkedIn
                     </p>
@@ -176,7 +176,7 @@ export default function Contact() {
                     <FaEnvelope />
                   </div>
 
-                  <div className="min-w-0">
+                  <div className="min-w-0 text-left">
                     <p className="text-white font-medium truncate">
                       Email
                     </p>
@@ -227,7 +227,7 @@ export default function Contact() {
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
-            className="relative rounded-[32px] border border-white/10 bg-white/[0.03] backdrop-blur-xl p-6 sm:p-8 overflow-hidden"
+            className="relative rounded-[32px] border border-white/10 bg-white/[0.03] backdrop-blur-xl p-6 sm:p-8 overflow-hidden w-full"
           >
 
             {/* GLOW */}
@@ -240,7 +240,7 @@ export default function Contact() {
             <input type="text" name="_honey" style={{ display: "none" }} />
 
             {/* FORM HEADER */}
-            <div className="mb-7 relative z-10">
+            <div className="mb-7 relative z-10 text-center lg:text-left">
               <p className="text-xs uppercase tracking-[0.3em] text-cyan-400/60 mb-3">
                 START A CONVERSATION
               </p>
@@ -256,7 +256,7 @@ export default function Contact() {
             <div className="space-y-5 relative z-10">
 
               <div>
-                <label className="text-sm text-gray-400 mb-2 block">
+                <label className="text-sm text-gray-400 mb-2 block text-left">
                   Your Name
                 </label>
 
@@ -270,7 +270,7 @@ export default function Contact() {
               </div>
 
               <div>
-                <label className="text-sm text-gray-400 mb-2 block">
+                <label className="text-sm text-gray-400 mb-2 block text-left">
                   Email Address
                 </label>
 
@@ -284,7 +284,7 @@ export default function Contact() {
               </div>
 
               <div>
-                <label className="text-sm text-gray-400 mb-2 block">
+                <label className="text-sm text-gray-400 mb-2 block text-left">
                   Project Details
                 </label>
 
