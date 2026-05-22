@@ -37,40 +37,40 @@ export default function Hero() {
             </div>
           </motion.div>
 
-         {/* Heading */}
-<motion.h1
-  className="text-5xl sm:text-6xl md:text-7xl font-black leading-[0.95] tracking-tight"
-  initial={{ opacity: 0, y: 60 }}
-  animate={{ opacity: 1, y: 0 }}
->
-  <span
-    className="gradient-text block"
-    style={{
-      fontFamily: "'Bebas Neue', sans-serif",
-      letterSpacing: "0.04em",
-    }}
-  >
-    AI SYSTEMS
-  </span>
+          {/* Heading */}
+          <motion.h1
+            className="text-5xl sm:text-6xl md:text-7xl font-black leading-[0.95] tracking-tight"
+            initial={{ opacity: 0, y: 60 }}
+            animate={{ opacity: 1, y: 0 }}
+          >
+            <span
+              className="gradient-text block"
+              style={{
+                fontFamily: "'Bebas Neue', sans-serif",
+                letterSpacing: "0.04em",
+              }}
+            >
+              AI SYSTEMS
+            </span>
 
-  <span
-    className="text-white block"
-    style={{
-      fontFamily: "'Clash Display', sans-serif",
-    }}
-  >
-    BUILT FOR
-  </span>
+            <span
+              className="text-white block"
+              style={{
+                fontFamily: "'Clash Display', sans-serif",
+              }}
+            >
+              BUILT FOR
+            </span>
 
-  <span
-    className="text-gray-400 block"
-    style={{
-      fontFamily: "'Clash Display', sans-serif",
-    }}
-  >
-    AUTOMATION
-  </span>
-</motion.h1>
+            <span
+              className="text-gray-400 block"
+              style={{
+                fontFamily: "'Clash Display', sans-serif",
+              }}
+            >
+              AUTOMATION
+            </span>
+          </motion.h1>
 
           {/* Description */}
           <motion.p
@@ -113,6 +113,7 @@ export default function Hero() {
               Hire Me
             </button>
           </motion.div>
+        </div>
 
         {/* RIGHT SIDE */}
         <motion.div
