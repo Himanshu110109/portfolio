@@ -17,7 +17,7 @@ export default function Hero() {
         transition={{ repeat: Infinity, duration: 14 }}
       />
 
-      {/* Grid */}
+      {/* Grid Background */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px]" />
 
       {/* Main Layout */}
@@ -37,7 +37,7 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* Heading */}
+          {/* Main Heading */}
           <motion.h1
             className="text-5xl sm:text-6xl md:text-7xl font-black leading-[0.95] tracking-tight"
             initial={{ opacity: 0, y: 60 }}
@@ -116,132 +116,115 @@ export default function Hero() {
         </div>
 
         {/* RIGHT SIDE */}
-<motion.div
-  className="relative hidden md:flex justify-center items-center"
-  initial={{ opacity: 0, scale: 0.9 }}
-  animate={{ opacity: 1, scale: 1 }}
-  transition={{ duration: 0.8 }}
->
+        <motion.div
+          className="relative hidden md:flex justify-center items-center"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+        >
 
-  {/* Futuristic Orb Container */}
-  <div className="relative w-[520px] h-[520px] flex items-center justify-center">
+          {/* Futuristic Orb Container */}
+          <div className="relative w-[520px] h-[520px] flex items-center justify-center">
 
-    {/* Outer Glow */}
-    <div className="absolute w-[420px] h-[420px] rounded-full bg-purple-500/20 blur-[120px]" />
+            {/* Outer Glow */}
+            <div className="absolute w-[420px] h-[420px] rounded-full bg-purple-500/20 blur-[120px]" />
 
-    {/* Rotating Ring 1 */}
-    <motion.div
-      className="absolute w-[420px] h-[420px] rounded-full border border-purple-500/20"
-      animate={{ rotate: 360 }}
-      transition={{
-        repeat: Infinity,
-        duration: 20,
-        ease: "linear",
-      }}
-    />
-
-    {/* Rotating Ring 2 */}
-    <motion.div
-      className="absolute w-[320px] h-[320px] rounded-full border border-blue-400/20 border-dashed"
-      animate={{ rotate: -360 }}
-      transition={{
-        repeat: Infinity,
-        duration: 16,
-        ease: "linear",
-      }}
-    />
-
-    {/* Floating Gradient Orb */}
-    <motion.div
-      className="relative w-[180px] h-[180px] rounded-full bg-gradient-to-br from-purple-600 via-blue-500 to-cyan-400 shadow-[0_0_120px_rgba(168,85,247,0.6)]"
-      animate={{
-        y: [0, -20, 0],
-        scale: [1, 1.05, 1],
-      }}
-      transition={{
-        repeat: Infinity,
-        duration: 5,
-      }}
-    >
-
-      {/* Inner Glow */}
-      <div className="absolute inset-6 rounded-full bg-black/40 backdrop-blur-3xl border border-white/10" />
-
-      {/* Center Dot */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="w-5 h-5 rounded-full bg-white shadow-[0_0_30px_white]" />
-      </div>
-    </motion.div>
-
-    {/* Floating Labels */}
-    <motion.div
-      className="absolute top-16 left-8 glass px-4 py-2 rounded-2xl"
-      animate={{ y: [0, -12, 0] }}
-      transition={{ repeat: Infinity, duration: 4 }}
-    >
-      <p className="text-xs text-gray-400">Neural AI</p>
-      <h3 className="font-semibold">Connected</h3>
-    </motion.div>
-
-    <motion.div
-      className="absolute bottom-20 right-6 glass px-4 py-2 rounded-2xl"
-      animate={{ y: [0, 12, 0] }}
-      transition={{ repeat: Infinity, duration: 5 }}
-    >
-      <p className="text-xs text-gray-400">Automation</p>
-      <h3 className="font-semibold">Running</h3>
-    </motion.div>
-
-    <motion.div
-      className="absolute top-1/2 right-0 glass px-4 py-2 rounded-2xl"
-      animate={{ x: [0, 10, 0] }}
-      transition={{ repeat: Infinity, duration: 3 }}
-    >
-      <p className="text-xs text-gray-400">LLM Status</p>
-      <h3 className="font-semibold text-green-400">Online</h3>
-    </motion.div>
-
-    {/* Tiny Floating Dots */}
-    <motion.div
-      className="absolute top-24 right-24 w-3 h-3 rounded-full bg-cyan-400"
-      animate={{
-        y: [0, -15, 0],
-        opacity: [0.4, 1, 0.4],
-      }}
-      transition={{
-        repeat: Infinity,
-        duration: 3,
-      }}
-    />
-
-    <motion.div
-      className="absolute bottom-28 left-20 w-2 h-2 rounded-full bg-purple-400"
-      animate={{
-        y: [0, 15, 0],
-        opacity: [0.3, 1, 0.3],
-      }}
-      transition={{
-        repeat: Infinity,
-        duration: 4,
-      }}
-    />
-  </div>
-</motion.div>
-
-            {/* Center Circle */}
+            {/* Rotating Ring 1 */}
             <motion.div
-              className="absolute inset-0 flex items-center justify-center"
+              className="absolute w-[420px] h-[420px] rounded-full border border-purple-500/20"
               animate={{ rotate: 360 }}
               transition={{
                 repeat: Infinity,
-                duration: 30,
+                duration: 20,
                 ease: "linear",
               }}
+            />
+
+            {/* Rotating Ring 2 */}
+            <motion.div
+              className="absolute w-[320px] h-[320px] rounded-full border border-blue-400/20 border-dashed"
+              animate={{ rotate: -360 }}
+              transition={{
+                repeat: Infinity,
+                duration: 16,
+                ease: "linear",
+              }}
+            />
+
+            {/* Floating Orb */}
+            <motion.div
+              className="relative w-[180px] h-[180px] rounded-full bg-gradient-to-br from-purple-600 via-blue-500 to-cyan-400 shadow-[0_0_120px_rgba(168,85,247,0.6)]"
+              animate={{
+                y: [0, -20, 0],
+                scale: [1, 1.05, 1],
+              }}
+              transition={{
+                repeat: Infinity,
+                duration: 5,
+              }}
             >
-              <div className="w-[240px] h-[240px] rounded-full border border-purple-500/30 flex items-center justify-center">
-                <div className="w-[140px] h-[140px] rounded-full bg-gradient-to-r from-purple-600 to-blue-500 blur-2xl opacity-70" />
+
+              {/* Inner Glow */}
+              <div className="absolute inset-6 rounded-full bg-black/40 backdrop-blur-3xl border border-white/10" />
+
+              {/* Center Dot */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-5 h-5 rounded-full bg-white shadow-[0_0_30px_white]" />
               </div>
             </motion.div>
+
+            {/* Floating Labels */}
+            <motion.div
+              className="absolute top-16 left-8 glass px-4 py-2 rounded-2xl"
+              animate={{ y: [0, -12, 0] }}
+              transition={{ repeat: Infinity, duration: 4 }}
+            >
+              <p className="text-xs text-gray-400">Neural AI</p>
+              <h3 className="font-semibold">Connected</h3>
+            </motion.div>
+
+            <motion.div
+              className="absolute bottom-20 right-6 glass px-4 py-2 rounded-2xl"
+              animate={{ y: [0, 12, 0] }}
+              transition={{ repeat: Infinity, duration: 5 }}
+            >
+              <p className="text-xs text-gray-400">Automation</p>
+              <h3 className="font-semibold">Running</h3>
+            </motion.div>
+
+            <motion.div
+              className="absolute top-1/2 right-0 glass px-4 py-2 rounded-2xl"
+              animate={{ x: [0, 10, 0] }}
+              transition={{ repeat: Infinity, duration: 3 }}
+            >
+              <p className="text-xs text-gray-400">LLM Status</p>
+              <h3 className="font-semibold text-green-400">Online</h3>
+            </motion.div>
+
+            {/* Tiny Floating Dots */}
+            <motion.div
+              className="absolute top-24 right-24 w-3 h-3 rounded-full bg-cyan-400"
+              animate={{
+                y: [0, -15, 0],
+                opacity: [0.4, 1, 0.4],
+              }}
+              transition={{
+                repeat: Infinity,
+                duration: 3,
+              }}
+            />
+
+            <motion.div
+              className="absolute bottom-28 left-20 w-2 h-2 rounded-full bg-purple-400"
+              animate={{
+                y: [0, 15, 0],
+                opacity: [0.3, 1, 0.3],
+              }}
+              transition={{
+                repeat: Infinity,
+                duration: 4,
+              }}
+            />
           </div>
         </motion.div>
       </div>
