@@ -10,11 +10,11 @@ export default function About() {
 
   const { scrollYProgress } = useScroll();
 
-  // Horizontal scrolling animation
+  // smoother + smaller movement
   const x = useTransform(
     scrollYProgress,
-    [0.15, 0.45],
-    ["8%", "-35%"]
+    [0.1, 0.4],
+    ["0%", "-12%"]
   );
 
   return (
@@ -41,22 +41,22 @@ export default function About() {
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mb-10"
+          className="mb-8"
         >
           <p className="text-xs uppercase tracking-[0.3em] text-purple-400/60">
             ABOUT
           </p>
         </motion.div>
 
-        {/* HORIZONTAL SCROLLING TITLE */}
-        <div className="relative overflow-hidden">
+        {/* SCROLL TITLE */}
+        <div className="relative overflow-hidden pb-2">
 
           <motion.h2
             style={{ x }}
-            className="text-[20vw] sm:text-[14vw] md:text-[10vw] leading-none font-black whitespace-nowrap will-change-transform"
+            className="leading-none font-black whitespace-nowrap will-change-transform"
           >
             <span
-              className="gradient-text"
+              className="gradient-text text-[18vw] sm:text-[11vw] md:text-[8vw]"
               style={{
                 fontFamily: "'Bebas Neue', sans-serif",
                 letterSpacing: "0.04em",
@@ -66,47 +66,20 @@ export default function About() {
             </span>
 
             <span
-              className="text-white/90"
+              className="text-white/90 text-[18vw] sm:text-[11vw] md:text-[8vw]"
               style={{
                 fontFamily: "'Clash Display', sans-serif",
               }}
             >
-              {" "}DEVELOPER{" "}
-            </span>
-
-            <span
-              className="text-gray-500"
-              style={{
-                fontFamily: "'Clash Display', sans-serif",
-              }}
-            >
-              • AI ENGINEER •
+              {" "}DEVELOPER
             </span>
           </motion.h2>
-
-          {/* Floating badge */}
-          <motion.div
-            animate={{
-              y: [0, -8, 0],
-            }}
-            transition={{
-              repeat: Infinity,
-              duration: 4,
-            }}
-            className="absolute right-0 top-1/2 -translate-y-1/2 hidden md:flex items-center gap-3 border border-white/10 bg-white/[0.03] backdrop-blur-xl rounded-2xl px-4 py-3"
-          >
-            <FaBrain className="text-purple-400" />
-
-            <p className="text-sm text-gray-300">
-              AI + Design + Code
-            </p>
-          </motion.div>
         </div>
 
-        {/* CONTENT BLOCK */}
-        <div className="mt-10 md:mt-14 grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-16 items-start">
+        {/* CONTENT */}
+        <div className="mt-8 md:mt-12 grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-16 items-start">
 
-          {/* LEFT SIDE */}
+          {/* LEFT */}
           <motion.div
             initial={{ opacity: 0, x: -25 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -125,7 +98,7 @@ export default function About() {
               performance and usability at the center.
             </p>
 
-            {/* MINI FEATURES */}
+            {/* FEATURES */}
             <div className="flex flex-wrap gap-4 mt-8">
 
               <motion.div
@@ -163,7 +136,7 @@ export default function About() {
             </div>
           </motion.div>
 
-          {/* RIGHT SIDE */}
+          {/* RIGHT */}
           <motion.div
             initial={{ opacity: 0, x: 25 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -171,12 +144,12 @@ export default function About() {
             className="relative"
           >
 
-            {/* QUOTE BLOCK */}
+            {/* QUOTE */}
             <div className="relative">
 
-              {/* Giant quote */}
+              {/* GIANT QUOTE */}
               <div
-                className="absolute -top-10 left-0 text-[120px] sm:text-[160px] text-white/[0.03] leading-none"
+                className="absolute -top-8 left-0 text-[100px] sm:text-[140px] text-white/[0.03] leading-none"
                 style={{
                   fontFamily: "'Bebas Neue', sans-serif",
                 }}
