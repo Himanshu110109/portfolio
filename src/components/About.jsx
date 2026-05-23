@@ -1,4 +1,4 @@
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   FaArrowRight,
   FaBrain,
@@ -7,16 +7,6 @@ import {
 } from "react-icons/fa6";
 
 export default function About() {
-
-  const { scrollYProgress } = useScroll();
-
-  // smoother + smaller movement
-  const x = useTransform(
-    scrollYProgress,
-    [0.1, 0.4],
-    ["0%", "-12%"]
-  );
-
   return (
     <section
       id="about"
@@ -36,45 +26,47 @@ export default function About() {
 
       <div className="relative z-10 max-w-7xl mx-auto">
 
-        {/* TOP LABEL */}
+        {/* LABEL */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mb-8"
+          className="mb-6"
         >
           <p className="text-xs uppercase tracking-[0.3em] text-purple-400/60">
             ABOUT
           </p>
         </motion.div>
 
-        {/* SCROLL TITLE */}
-        <div className="relative overflow-hidden pb-2">
+        {/* HEADLINE */}
+        <motion.div
+          initial={{ opacity: 0, y: 35 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+        >
 
-          <motion.h2
-            style={{ x }}
-            className="leading-none font-black whitespace-nowrap will-change-transform"
-          >
+          <h2 className="leading-[0.9] font-black break-words">
+
             <span
-              className="gradient-text text-[18vw] sm:text-[11vw] md:text-[8vw]"
+              className="gradient-text block text-[17vw] sm:text-[11vw] md:text-[7vw]"
               style={{
                 fontFamily: "'Bebas Neue', sans-serif",
-                letterSpacing: "0.04em",
+                letterSpacing: "0.03em",
               }}
             >
               CREATIVE
             </span>
 
             <span
-              className="text-white/90 text-[18vw] sm:text-[11vw] md:text-[8vw]"
+              className="text-white block text-[15vw] sm:text-[10vw] md:text-[6.5vw]"
               style={{
                 fontFamily: "'Clash Display', sans-serif",
               }}
             >
-              {" "}DEVELOPER
+              DEVELOPER
             </span>
-          </motion.h2>
-        </div>
+          </h2>
+        </motion.div>
 
         {/* CONTENT */}
         <div className="mt-8 md:mt-12 grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-16 items-start">
@@ -144,10 +136,10 @@ export default function About() {
             className="relative"
           >
 
-            {/* QUOTE */}
+            {/* QUOTE BLOCK */}
             <div className="relative">
 
-              {/* GIANT QUOTE */}
+              {/* BIG QUOTE */}
               <div
                 className="absolute -top-8 left-0 text-[100px] sm:text-[140px] text-white/[0.03] leading-none"
                 style={{
