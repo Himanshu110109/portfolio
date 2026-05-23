@@ -1,16 +1,16 @@
 import { motion } from "framer-motion";
 import {
-  FaBrain,
-  FaBolt,
-  FaCode,
   FaArrowRight,
+  FaBrain,
+  FaCode,
+  FaWandMagicSparkles,
 } from "react-icons/fa6";
 
 export default function About() {
   return (
     <section
       id="about"
-      className="relative overflow-hidden px-4 sm:px-6 py-14 md:py-24"
+      className="relative overflow-hidden px-4 sm:px-6 py-16 md:py-24"
     >
 
       {/* BACKGROUND */}
@@ -18,186 +18,186 @@ export default function About() {
 
         <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-purple-600/10 blur-[180px] rounded-full" />
 
-        <div className="absolute bottom-[-150px] right-[-100px] w-[450px] h-[450px] bg-cyan-500/10 blur-[140px] rounded-full" />
+        <div className="absolute bottom-[-120px] right-[-100px] w-[400px] h-[400px] bg-cyan-500/10 blur-[140px] rounded-full" />
 
         {/* GRID */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px]" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.025)_1px,transparent_1px)] bg-[size:40px_40px]" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto">
 
-        {/* TOP */}
-        <div className="grid lg:grid-cols-[0.9fr_1fr] gap-12 lg:gap-20 items-start">
+        {/* TOP LABEL */}
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="mb-10"
+        >
+          <p className="text-xs uppercase tracking-[0.3em] text-purple-400/60">
+            ABOUT
+          </p>
+        </motion.div>
 
-          {/* LEFT */}
+        {/* BIG MARQUEE STYLE TITLE */}
+        <motion.div
+          initial={{ opacity: 0, y: 35 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className="relative"
+        >
+
+          <h2
+            className="text-[18vw] sm:text-[14vw] md:text-[10vw] leading-none font-black whitespace-nowrap"
+            style={{
+              fontFamily: "'Bebas Neue', sans-serif",
+              letterSpacing: "0.04em",
+            }}
+          >
+            <span className="gradient-text">
+              CREATIVE
+            </span>
+
+            <span className="text-white/90">
+              {" "}DEVELOPER
+            </span>
+          </h2>
+
+          {/* Floating small badge */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            animate={{
+              y: [0, -8, 0],
+            }}
+            transition={{
+              repeat: Infinity,
+              duration: 4,
+            }}
+            className="absolute right-0 top-1/2 -translate-y-1/2 hidden md:flex items-center gap-3 border border-white/10 bg-white/[0.03] backdrop-blur-xl rounded-2xl px-4 py-3"
+          >
+            <FaBrain className="text-purple-400" />
+
+            <p className="text-sm text-gray-300">
+              AI + Design + Code
+            </p>
+          </motion.div>
+        </motion.div>
+
+        {/* CONTENT BLOCK */}
+        <div className="mt-10 md:mt-14 grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-16 items-start">
+
+          {/* LEFT SIDE */}
+          <motion.div
+            initial={{ opacity: 0, x: -25 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
           >
 
-            {/* TAG */}
-            <p className="text-xs uppercase tracking-[0.3em] text-purple-400/60 mb-3">
-              ABOUT
+            <p className="text-gray-300 text-lg sm:text-xl leading-relaxed max-w-2xl">
+              I create immersive digital experiences that blend
+              modern web technologies, AI systems, motion,
+              and interactive design into products that feel alive.
             </p>
 
-            {/* TITLE */}
-            <h2 className="leading-[0.95] font-black">
+            <p className="text-gray-500 text-sm sm:text-base leading-relaxed mt-6 max-w-xl">
+              My work focuses on crafting fast, futuristic,
+              and visually memorable interfaces while keeping
+              performance and usability at the center.
+            </p>
 
-              <span
-                className="gradient-text block text-3xl sm:text-4xl md:text-5xl"
-                style={{
-                  fontFamily: "'Bebas Neue', sans-serif",
-                  letterSpacing: "0.04em",
-                }}
+            {/* MINI FEATURES */}
+            <div className="flex flex-wrap gap-4 mt-8">
+
+              <motion.div
+                whileHover={{ y: -4 }}
+                className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-xl px-4 py-3"
               >
-                DIGITAL
-              </span>
+                <FaCode className="text-cyan-400" />
 
-              <span
-                className="text-white block text-3xl sm:text-4xl md:text-5xl"
-                style={{
-                  fontFamily: "'Clash Display', sans-serif",
-                }}
+                <p className="text-sm text-gray-300">
+                  Modern Interfaces
+                </p>
+              </motion.div>
+
+              <motion.div
+                whileHover={{ y: -4 }}
+                className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-xl px-4 py-3"
               >
-                EXPERIENCES
-              </span>
+                <FaBrain className="text-purple-400" />
 
-              <span
-                className="text-gray-500 block text-3xl sm:text-4xl md:text-5xl"
-                style={{
-                  fontFamily: "'Clash Display', sans-serif",
-                }}
+                <p className="text-sm text-gray-300">
+                  AI Experiences
+                </p>
+              </motion.div>
+
+              <motion.div
+                whileHover={{ y: -4 }}
+                className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-xl px-4 py-3"
               >
-                WITH AI
-              </span>
-            </h2>
+                <FaWandMagicSparkles className="text-pink-400" />
 
-            {/* DESCRIPTION */}
-            <div className="mt-5 max-w-xl">
-
-              <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
-                I build immersive digital products powered by
-                modern web technologies, AI, and automation.
-              </p>
-
-              <p className="text-gray-500 text-sm sm:text-base leading-relaxed mt-4">
-                My focus is creating experiences that feel fast,
-                futuristic, interactive, and actually useful —
-                not just visually impressive.
-              </p>
-
-              <p className="text-gray-500 text-sm sm:text-base leading-relaxed mt-4">
-                I enjoy combining engineering, creativity,
-                motion design, and intelligent systems
-                into products people genuinely enjoy using.
-              </p>
+                <p className="text-sm text-gray-300">
+                  Creative Systems
+                </p>
+              </motion.div>
             </div>
           </motion.div>
 
-          {/* RIGHT */}
+          {/* RIGHT SIDE */}
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, x: 25 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7 }}
             className="relative"
           >
 
-            {/* TIMELINE */}
-            <div className="relative pl-6 sm:pl-8 border-l border-white/10 space-y-8">
+            {/* MASSIVE QUOTE BLOCK */}
+            <div className="relative">
 
-              {/* ITEM */}
-              <motion.div
-                whileHover={{ x: 6 }}
-                className="relative"
+              {/* Giant quote mark */}
+              <div
+                className="absolute -top-10 left-0 text-[120px] sm:text-[160px] text-white/[0.03] leading-none"
+                style={{
+                  fontFamily: "'Bebas Neue', sans-serif",
+                }}
               >
+                ”
+              </div>
 
-                {/* DOT */}
-                <div className="absolute -left-[34px] sm:-left-[42px] top-1 w-4 h-4 rounded-full bg-purple-500 shadow-[0_0_20px_rgba(168,85,247,0.7)]" />
+              <div className="relative z-10 border-l border-purple-500/20 pl-5 sm:pl-7">
 
-                <div>
-                  <div className="flex items-center gap-3 mb-2">
-                    <FaBrain className="text-purple-400 text-lg" />
+                <p className="text-2xl sm:text-3xl md:text-4xl leading-[1.2] font-medium text-white max-w-lg">
+                  Building interfaces that feel
+                  cinematic, intelligent,
+                  and deeply interactive.
+                </p>
 
-                    <p className="text-white font-medium">
-                      AI Engineering
-                    </p>
+                <div className="mt-8 flex items-center gap-4">
+
+                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-600 to-blue-500 flex items-center justify-center font-bold">
+                    H
                   </div>
 
-                  <p className="text-gray-500 text-sm leading-relaxed">
-                    Building intelligent AI workflows,
-                    LLM-powered products, and automation systems.
-                  </p>
-                </div>
-              </motion.div>
+                  <div>
+                    <p className="text-white text-sm font-medium">
+                      Himanshu
+                    </p>
 
-              {/* ITEM */}
-              <motion.div
-                whileHover={{ x: 6 }}
-                className="relative"
-              >
-
-                <div className="absolute -left-[34px] sm:-left-[42px] top-1 w-4 h-4 rounded-full bg-cyan-400 shadow-[0_0_20px_rgba(34,211,238,0.7)]" />
-
-                <div>
-                  <div className="flex items-center gap-3 mb-2">
-                    <FaCode className="text-cyan-400 text-lg" />
-
-                    <p className="text-white font-medium">
-                      Full Stack Development
+                    <p className="text-gray-500 text-xs">
+                      AI Engineer & Developer
                     </p>
                   </div>
-
-                  <p className="text-gray-500 text-sm leading-relaxed">
-                    Creating scalable frontend and backend systems
-                    with modern architecture and clean UI.
-                  </p>
                 </div>
-              </motion.div>
 
-              {/* ITEM */}
-              <motion.div
-                whileHover={{ x: 6 }}
-                className="relative"
-              >
+                {/* CTA */}
+                <button className="group flex items-center gap-3 mt-8 text-sm text-purple-300 hover:text-white transition">
 
-                <div className="absolute -left-[34px] sm:-left-[42px] top-1 w-4 h-4 rounded-full bg-green-400 shadow-[0_0_20px_rgba(74,222,128,0.7)]" />
+                  <span>
+                    Explore Projects
+                  </span>
 
-                <div>
-                  <div className="flex items-center gap-3 mb-2">
-                    <FaBolt className="text-green-400 text-lg" />
-
-                    <p className="text-white font-medium">
-                      Creative Problem Solving
-                    </p>
-                  </div>
-
-                  <p className="text-gray-500 text-sm leading-relaxed">
-                    Combining logic, creativity, and interaction
-                    to craft memorable user experiences.
-                  </p>
-                </div>
-              </motion.div>
-
+                  <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+                </button>
+              </div>
             </div>
-
-            {/* BOTTOM CTA */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ delay: 0.3 }}
-              className="mt-10"
-            >
-
-              <button className="group flex items-center gap-3 text-sm text-white hover:text-purple-300 transition">
-
-                <span>
-                  Explore my work
-                </span>
-
-                <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
-              </button>
-            </motion.div>
           </motion.div>
         </div>
       </div>
