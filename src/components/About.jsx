@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import {
   FaBrain,
-  FaRobot,
-  FaCode,
   FaBolt,
+  FaCode,
+  FaArrowRight,
 } from "react-icons/fa6";
 
 export default function About() {
@@ -26,15 +26,14 @@ export default function About() {
 
       <div className="relative z-10 max-w-7xl mx-auto">
 
-        {/* MAIN GRID */}
-        <div className="grid lg:grid-cols-[0.95fr_1fr] gap-12 lg:gap-8 items-center">
+        {/* TOP */}
+        <div className="grid lg:grid-cols-[0.9fr_1fr] gap-12 lg:gap-20 items-start">
 
-          {/* LEFT SIDE */}
+          {/* LEFT */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="relative"
           >
 
             {/* TAG */}
@@ -42,40 +41,40 @@ export default function About() {
               ABOUT
             </p>
 
-            {/* HEADING */}
-            <h2 className="leading-[0.9] font-black">
+            {/* TITLE */}
+            <h2 className="leading-[0.95] font-black">
 
               <span
-                className="gradient-text block text-4xl sm:text-5xl md:text-7xl"
+                className="gradient-text block text-3xl sm:text-4xl md:text-5xl"
                 style={{
                   fontFamily: "'Bebas Neue', sans-serif",
                   letterSpacing: "0.04em",
-                }}
-              >
-                BUILDING
-              </span>
-
-              <span
-                className="text-white block text-4xl sm:text-5xl md:text-7xl"
-                style={{
-                  fontFamily: "'Clash Display', sans-serif",
                 }}
               >
                 DIGITAL
               </span>
 
               <span
-                className="text-gray-500 block text-4xl sm:text-5xl md:text-7xl"
+                className="text-white block text-3xl sm:text-4xl md:text-5xl"
                 style={{
                   fontFamily: "'Clash Display', sans-serif",
                 }}
               >
                 EXPERIENCES
               </span>
+
+              <span
+                className="text-gray-500 block text-3xl sm:text-4xl md:text-5xl"
+                style={{
+                  fontFamily: "'Clash Display', sans-serif",
+                }}
+              >
+                WITH AI
+              </span>
             </h2>
 
-            {/* PARAGRAPHS */}
-            <div className="mt-6 max-w-xl">
+            {/* DESCRIPTION */}
+            <div className="mt-5 max-w-xl">
 
               <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
                 I build immersive digital products powered by
@@ -96,122 +95,109 @@ export default function About() {
             </div>
           </motion.div>
 
-          {/* RIGHT SIDE */}
+          {/* RIGHT */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.92 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="relative flex items-center justify-center h-[320px] sm:h-[420px] md:h-[520px]"
+            className="relative"
           >
 
-            {/* CENTER CORE */}
-            <motion.div
-              animate={{
-                scale: [1, 1.05, 1],
-                rotate: [0, 2, -2, 0],
-              }}
-              transition={{
-                repeat: Infinity,
-                duration: 6,
-              }}
-              className="relative w-[120px] h-[120px] sm:w-[160px] sm:h-[160px] md:w-[190px] md:h-[190px] rounded-full bg-gradient-to-br from-purple-600 via-blue-500 to-cyan-400 shadow-[0_0_120px_rgba(168,85,247,0.4)] flex items-center justify-center"
-            >
+            {/* TIMELINE */}
+            <div className="relative pl-6 sm:pl-8 border-l border-white/10 space-y-8">
 
-              {/* INNER */}
-              <div className="absolute inset-4 sm:inset-5 rounded-full bg-black/50 backdrop-blur-3xl border border-white/10" />
-
-              {/* PULSE */}
+              {/* ITEM */}
               <motion.div
-                className="absolute w-full h-full rounded-full border border-cyan-400/20"
-                animate={{
-                  scale: [1, 1.2],
-                  opacity: [0.6, 0],
-                }}
-                transition={{
-                  repeat: Infinity,
-                  duration: 2.5,
-                }}
-              />
+                whileHover={{ x: 6 }}
+                className="relative"
+              >
 
-              <div className="relative z-10">
-                <FaBrain className="text-white text-3xl sm:text-4xl" />
-              </div>
-            </motion.div>
+                {/* DOT */}
+                <div className="absolute -left-[34px] sm:-left-[42px] top-1 w-4 h-4 rounded-full bg-purple-500 shadow-[0_0_20px_rgba(168,85,247,0.7)]" />
 
-            {/* OUTER RINGS */}
+                <div>
+                  <div className="flex items-center gap-3 mb-2">
+                    <FaBrain className="text-purple-400 text-lg" />
+
+                    <p className="text-white font-medium">
+                      AI Engineering
+                    </p>
+                  </div>
+
+                  <p className="text-gray-500 text-sm leading-relaxed">
+                    Building intelligent AI workflows,
+                    LLM-powered products, and automation systems.
+                  </p>
+                </div>
+              </motion.div>
+
+              {/* ITEM */}
+              <motion.div
+                whileHover={{ x: 6 }}
+                className="relative"
+              >
+
+                <div className="absolute -left-[34px] sm:-left-[42px] top-1 w-4 h-4 rounded-full bg-cyan-400 shadow-[0_0_20px_rgba(34,211,238,0.7)]" />
+
+                <div>
+                  <div className="flex items-center gap-3 mb-2">
+                    <FaCode className="text-cyan-400 text-lg" />
+
+                    <p className="text-white font-medium">
+                      Full Stack Development
+                    </p>
+                  </div>
+
+                  <p className="text-gray-500 text-sm leading-relaxed">
+                    Creating scalable frontend and backend systems
+                    with modern architecture and clean UI.
+                  </p>
+                </div>
+              </motion.div>
+
+              {/* ITEM */}
+              <motion.div
+                whileHover={{ x: 6 }}
+                className="relative"
+              >
+
+                <div className="absolute -left-[34px] sm:-left-[42px] top-1 w-4 h-4 rounded-full bg-green-400 shadow-[0_0_20px_rgba(74,222,128,0.7)]" />
+
+                <div>
+                  <div className="flex items-center gap-3 mb-2">
+                    <FaBolt className="text-green-400 text-lg" />
+
+                    <p className="text-white font-medium">
+                      Creative Problem Solving
+                    </p>
+                  </div>
+
+                  <p className="text-gray-500 text-sm leading-relaxed">
+                    Combining logic, creativity, and interaction
+                    to craft memorable user experiences.
+                  </p>
+                </div>
+              </motion.div>
+
+            </div>
+
+            {/* BOTTOM CTA */}
             <motion.div
-              className="absolute w-[240px] h-[240px] sm:w-[340px] sm:h-[340px] md:w-[420px] md:h-[420px] rounded-full border border-purple-500/10"
-              animate={{ rotate: 360 }}
-              transition={{
-                repeat: Infinity,
-                duration: 30,
-                ease: "linear",
-              }}
-            />
-
-            <motion.div
-              className="absolute w-[180px] h-[180px] sm:w-[260px] sm:h-[260px] md:w-[320px] md:h-[320px] rounded-full border border-cyan-500/10 border-dashed"
-              animate={{ rotate: -360 }}
-              transition={{
-                repeat: Infinity,
-                duration: 22,
-                ease: "linear",
-              }}
-            />
-
-            {/* FLOATING ITEMS */}
-
-            {/* AI */}
-            <motion.div
-              className="absolute top-[10%] left-[8%] sm:left-[12%]"
-              animate={{ y: [0, -12, 0] }}
-              transition={{
-                repeat: Infinity,
-                duration: 4,
-              }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 0.3 }}
+              className="mt-10"
             >
-              <div className="w-14 h-14 sm:w-18 sm:h-18 md:w-20 md:h-20 rounded-2xl md:rounded-3xl border border-white/10 bg-white/[0.04] backdrop-blur-xl flex flex-col items-center justify-center">
-                <FaRobot className="text-lg sm:text-xl md:text-2xl text-purple-400" />
-                <p className="text-[9px] sm:text-[10px] mt-1 sm:mt-2 text-gray-400">
-                  AI
-                </p>
-              </div>
-            </motion.div>
 
-            {/* SPEED */}
-            <motion.div
-              className="absolute top-[15%] right-[8%] sm:right-[10%]"
-              animate={{ y: [0, 10, 0] }}
-              transition={{
-                repeat: Infinity,
-                duration: 5,
-              }}
-            >
-              <div className="w-14 h-14 sm:w-18 sm:h-18 md:w-20 md:h-20 rounded-2xl md:rounded-3xl border border-white/10 bg-white/[0.04] backdrop-blur-xl flex flex-col items-center justify-center">
-                <FaBolt className="text-lg sm:text-xl md:text-2xl text-cyan-400" />
-                <p className="text-[9px] sm:text-[10px] mt-1 sm:mt-2 text-gray-400">
-                  SPEED
-                </p>
-              </div>
-            </motion.div>
+              <button className="group flex items-center gap-3 text-sm text-white hover:text-purple-300 transition">
 
-            {/* SYSTEMS */}
-            <motion.div
-              className="absolute bottom-[12%] left-[15%]"
-              animate={{ y: [0, -10, 0] }}
-              transition={{
-                repeat: Infinity,
-                duration: 6,
-              }}
-            >
-              <div className="w-14 h-14 sm:w-18 sm:h-18 md:w-20 md:h-20 rounded-2xl md:rounded-3xl border border-white/10 bg-white/[0.04] backdrop-blur-xl flex flex-col items-center justify-center">
-                <FaCode className="text-lg sm:text-xl md:text-2xl text-green-400" />
-                <p className="text-[9px] sm:text-[10px] mt-1 sm:mt-2 text-gray-400">
-                  SYSTEMS
-                </p>
-              </div>
-            </motion.div>
+                <span>
+                  Explore my work
+                </span>
 
+                <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
+              </button>
+            </motion.div>
           </motion.div>
         </div>
       </div>
