@@ -173,16 +173,6 @@ export default function About() {
                     </p>
                   </div>
                 </div>
-
-                {/* CTA */}
-                <button className="group flex items-center gap-3 mt-8 text-sm text-purple-300 hover:text-white transition">
-
-                  <span>
-                    Explore Projects
-                  </span>
-
-                  <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
-                </button>
               </div>
             </div>
           </motion.div>
