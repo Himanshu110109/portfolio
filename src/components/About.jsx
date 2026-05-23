@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import {
   FaArrowRight,
   FaBrain,
@@ -7,6 +7,16 @@ import {
 } from "react-icons/fa6";
 
 export default function About() {
+
+  const { scrollYProgress } = useScroll();
+
+  // Horizontal scrolling animation
+  const x = useTransform(
+    scrollYProgress,
+    [0.15, 0.45],
+    ["8%", "-35%"]
+  );
+
   return (
     <section
       id="about"
@@ -38,31 +48,43 @@ export default function About() {
           </p>
         </motion.div>
 
-        {/* BIG MARQUEE STYLE TITLE */}
-        <motion.div
-          initial={{ opacity: 0, y: 35 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          className="relative"
-        >
+        {/* HORIZONTAL SCROLLING TITLE */}
+        <div className="relative overflow-hidden">
 
-          <h2
-            className="text-[18vw] sm:text-[14vw] md:text-[10vw] leading-none font-black whitespace-nowrap"
-            style={{
-              fontFamily: "'Bebas Neue', sans-serif",
-              letterSpacing: "0.04em",
-            }}
+          <motion.h2
+            style={{ x }}
+            className="text-[20vw] sm:text-[14vw] md:text-[10vw] leading-none font-black whitespace-nowrap will-change-transform"
           >
-            <span className="gradient-text">
+            <span
+              className="gradient-text"
+              style={{
+                fontFamily: "'Bebas Neue', sans-serif",
+                letterSpacing: "0.04em",
+              }}
+            >
               CREATIVE
             </span>
 
-            <span className="text-white/90">
-              {" "}DEVELOPER
+            <span
+              className="text-white/90"
+              style={{
+                fontFamily: "'Clash Display', sans-serif",
+              }}
+            >
+              {" "}DEVELOPER{" "}
             </span>
-          </h2>
 
-          {/* Floating small badge */}
+            <span
+              className="text-gray-500"
+              style={{
+                fontFamily: "'Clash Display', sans-serif",
+              }}
+            >
+              • AI ENGINEER •
+            </span>
+          </motion.h2>
+
+          {/* Floating badge */}
           <motion.div
             animate={{
               y: [0, -8, 0],
@@ -79,7 +101,7 @@ export default function About() {
               AI + Design + Code
             </p>
           </motion.div>
-        </motion.div>
+        </div>
 
         {/* CONTENT BLOCK */}
         <div className="mt-10 md:mt-14 grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-16 items-start">
@@ -149,10 +171,10 @@ export default function About() {
             className="relative"
           >
 
-            {/* MASSIVE QUOTE BLOCK */}
+            {/* QUOTE BLOCK */}
             <div className="relative">
 
-              {/* Giant quote mark */}
+              {/* Giant quote */}
               <div
                 className="absolute -top-10 left-0 text-[120px] sm:text-[160px] text-white/[0.03] leading-none"
                 style={{
