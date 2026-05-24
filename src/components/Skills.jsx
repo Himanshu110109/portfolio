@@ -1,4 +1,4 @@
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { useState } from "react";
 import {
   SiReact,
@@ -14,33 +14,35 @@ import {
   SiGrafana,
   SiPython,
   SiFlask,
+  SiLangchain,
 } from "react-icons/si";
 
 import { FaBrain, FaRobot, FaAws } from "react-icons/fa";
-import { SiLangchain } from "react-icons/si";
 import { FaProjectDiagram } from "react-icons/fa";
 
 const skillGroups = [
   {
-  title: "AI Engineering",
-  desc: "Designing intelligent, autonomous AI systems",
-  skills: [
-    { name: "Agentic Systems", icon: <FaRobot /> },          
-    { name: "LangChain", icon: <SiLangchain /> }, 
-    { name: "n8n", icon: <FaProjectDiagram /> },
-    { name: "RAG Pipelines", icon: <FaBrain /> },            
-  ],
-},
+    title: "AI Engineering",
+    desc: "Designing intelligent autonomous systems",
+    skills: [
+      { name: "Agentic Systems", icon: <FaRobot /> },
+      { name: "LangChain", icon: <SiLangchain /> },
+      { name: "n8n", icon: <FaProjectDiagram /> },
+      { name: "RAG Pipelines", icon: <FaBrain /> },
+    ],
+  },
+
   {
-  title: "Backend Systems",
-  desc: "Scalable APIs & AI pipelines",
-  skills: [
-    { name: "FastAPI", icon: <SiFastapi /> },
-    { name: "Node.js", icon: <SiNodedotjs /> },
-    { name: "Python", icon: <SiPython /> },
-    { name: "Flask", icon: <SiFlask /> },
-  ],
-},
+    title: "Backend Systems",
+    desc: "Scalable APIs & AI pipelines",
+    skills: [
+      { name: "FastAPI", icon: <SiFastapi /> },
+      { name: "Node.js", icon: <SiNodedotjs /> },
+      { name: "Python", icon: <SiPython /> },
+      { name: "Flask", icon: <SiFlask /> },
+    ],
+  },
+
   {
     title: "Frontend",
     desc: "Modern UI with smooth UX",
@@ -49,10 +51,11 @@ const skillGroups = [
       { name: "Tailwind", icon: <SiTailwindcss /> },
     ],
   },
+
   {
-  title: "Deployment",
-  desc: "Ship fast and reliably",
-  skills: [
+    title: "Deployment",
+    desc: "Ship fast and reliably",
+    skills: [
       { name: "AWS", icon: <FaAws /> },
       { name: "Docker", icon: <SiDocker /> },
       { name: "Kubernetes", icon: <SiKubernetes /> },
@@ -61,105 +64,161 @@ const skillGroups = [
       { name: "Vercel", icon: <SiVercel /> },
       { name: "Render", icon: <SiRender /> },
       { name: "Streamlit", icon: <SiStreamlit /> },
-  ],
-},
+    ],
+  },
 ];
 
 export default function Skills() {
-  const [active, setActive] = useState(null);
+  const [active, setActive] = useState(0);
 
   return (
-    <section className="py-20 md:py-28 px-4 sm:px-6 relative overflow-hidden">
+    <section className="relative py-16 md:py-24 px-4 sm:px-6 overflow-hidden">
 
-      {/* Glow */}
-      <div className="blob w-[200px] h-[200px] md:w-[300px] md:h-[300px] bg-blue-600 top-20 left-5 md:left-10" />
+      {/* BACKGROUND */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
 
-      <div className="max-w-3xl mx-auto">
+        <div className="absolute top-[-180px] left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-purple-600/10 blur-[180px] rounded-full" />
 
-        {/* Heading */}
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold gradient-text mb-3 md:mb-4">
-            Tech Stack & Skills
+        <div className="absolute bottom-[-120px] right-[-100px] w-[350px] h-[350px] bg-cyan-500/10 blur-[120px] rounded-full" />
+
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.025)_1px,transparent_1px)] bg-[size:40px_40px]" />
+      </div>
+
+      <div className="relative z-10 max-w-6xl mx-auto">
+
+        {/* HEADING */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="mb-10 md:mb-14"
+        >
+
+          <p className="text-xs uppercase tracking-[0.3em] text-purple-400/60 mb-3">
+            STACK
+          </p>
+
+          <h2
+            className="text-4xl sm:text-5xl md:text-6xl leading-[0.9] font-black"
+            style={{
+              fontFamily: "'Bebas Neue', sans-serif",
+              letterSpacing: "0.04em",
+            }}
+          >
+            <span className="gradient-text">
+              TECH STACK
+            </span>
+
+            <span className="text-white">
+              {" "}& SKILLS
+            </span>
           </h2>
 
-          <p className="text-gray-400 text-sm sm:text-base px-2 sm:px-0">
-            I build complete AI systems from backend pipelines to polished UI.
+          <p className="text-gray-500 text-sm sm:text-base mt-5 max-w-2xl leading-relaxed">
+            Building complete AI systems from backend pipelines
+            to polished interactive experiences.
           </p>
-        </div>
+        </motion.div>
 
-        {/* Accordion */}
-        <div className="space-y-3 sm:space-y-4">
+        {/* MODERN TABS LAYOUT */}
+        <div className="grid lg:grid-cols-[280px_1fr] gap-5 md:gap-8">
 
-          {skillGroups.map((group, i) => {
-            const isOpen = active === i;
+          {/* LEFT SIDEBAR */}
+          <div className="flex lg:flex-col gap-3 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0 scrollbar-hide">
 
-            return (
-              <div
-                key={i}
-                className="glass rounded-xl sm:rounded-2xl overflow-hidden border border-white/10"
-              >
+            {skillGroups.map((group, index) => {
+              const isActive = active === index;
 
-                {/* HEADER */}
+              return (
                 <button
-                  onClick={() => setActive(isOpen ? null : i)}
-                  className="w-full flex justify-between items-center px-4 sm:px-6 py-3 sm:py-4 text-left"
+                  key={index}
+                  onClick={() => setActive(index)}
+                  className={`group relative min-w-[220px] lg:min-w-0 text-left rounded-2xl border transition-all duration-300 px-5 py-4 backdrop-blur-xl ${
+                    isActive
+                      ? "border-purple-500/40 bg-white/[0.05]"
+                      : "border-white/10 bg-white/[0.02] hover:bg-white/[0.04]"
+                  }`}
                 >
-                  <div>
-                    <h3 className="text-base sm:text-lg font-semibold">
+
+                  {/* ACTIVE GLOW */}
+                  {isActive && (
+                    <motion.div
+                      layoutId="activeSkillGlow"
+                      className="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-500/10 to-cyan-500/10"
+                    />
+                  )}
+
+                  <div className="relative z-10">
+
+                    <h3 className="text-white font-semibold text-sm sm:text-base">
                       {group.title}
                     </h3>
 
-                    <p className="text-gray-400 text-xs sm:text-sm">
+                    <p className="text-gray-500 text-xs sm:text-sm mt-1">
                       {group.desc}
                     </p>
                   </div>
-
-                  {/* ICON */}
-                  <motion.span
-                    animate={{ rotate: isOpen ? 180 : 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="text-purple-400 text-lg sm:text-xl"
-                  >
-                    ▼
-                  </motion.span>
                 </button>
+              );
+            })}
+          </div>
 
-                {/* CONTENT */}
-                <AnimatePresence>
-                  {isOpen && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.35 }}
-                      className="px-4 sm:px-6 pb-4 sm:pb-6"
-                    >
-                      <div className="flex flex-wrap gap-2 sm:gap-3 mt-2">
+          {/* RIGHT CONTENT */}
+          <motion.div
+            key={active}
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.35 }}
+            className="relative rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-xl p-5 sm:p-7 overflow-hidden"
+          >
 
-                        {group.skills.map((skill, idx) => (
-                          <motion.div
-                            key={idx}
-                            whileHover={{ scale: 1.05 }}
-                            className="flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white/10 border border-white/20 text-xs sm:text-sm hover:bg-purple-500/20 transition"
-                          >
-                            <span className="text-purple-400 text-sm">
-                              {skill.icon}
-                            </span>
-                            {skill.name}
-                          </motion.div>
-                        ))}
+            {/* TOP LINE */}
+            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-400/60 to-transparent" />
 
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+            {/* TITLE */}
+            <div className="mb-7">
 
-              </div>
-            );
-          })}
+              <h3 className="text-2xl sm:text-3xl font-bold text-white">
+                {skillGroups[active].title}
+              </h3>
 
+              <p className="text-gray-500 text-sm sm:text-base mt-2">
+                {skillGroups[active].desc}
+              </p>
+            </div>
+
+            {/* SKILLS */}
+            <div className="flex flex-wrap gap-3">
+
+              {skillGroups[active].skills.map((skill, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{
+                    delay: idx * 0.05,
+                  }}
+                  whileHover={{
+                    y: -4,
+                  }}
+                  className="group relative overflow-hidden flex items-center gap-3 rounded-2xl border border-white/10 bg-black/20 px-4 py-3 hover:border-purple-500/30 transition-all duration-300"
+                >
+
+                  {/* HOVER GLOW */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-purple-500/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition duration-500" />
+
+                  <span className="relative z-10 text-lg text-purple-400">
+                    {skill.icon}
+                  </span>
+
+                  <span className="relative z-10 text-sm sm:text-base text-gray-200">
+                    {skill.name}
+                  </span>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
         </div>
-
       </div>
     </section>
   );
