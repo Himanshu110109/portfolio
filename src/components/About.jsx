@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import {
-  FaArrowRight,
   FaBrain,
   FaCode,
   FaWandMagicSparkles,
@@ -128,12 +127,12 @@ export default function About() {
             </div>
           </motion.div>
 
-          {/* RIGHT */}
+          {/* RIGHT - ONLY FOR DESKTOP */}
           <motion.div
             initial={{ opacity: 0, x: 25 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
-            className="relative"
+            className="relative hidden lg:block"
           >
 
             {/* QUOTE BLOCK */}
@@ -149,9 +148,9 @@ export default function About() {
                 ”
               </div>
 
-              <div className="relative z-10 border-l border-purple-500/20 pl-5 sm:pl-7">
+              <div className="relative z-10 border-l border-purple-500/20 pl-7">
 
-                <p className="text-2xl sm:text-3xl md:text-4xl leading-[1.2] font-medium text-white max-w-lg">
+                <p className="text-3xl md:text-4xl leading-[1.2] font-medium text-white max-w-lg">
                   Building interfaces that feel
                   cinematic, intelligent,
                   and deeply interactive.
@@ -176,6 +175,7 @@ export default function About() {
               </div>
             </div>
           </motion.div>
+
         </div>
       </div>
     </section>
