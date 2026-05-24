@@ -24,7 +24,7 @@ export default function Hero() {
       <div className="relative z-10 w-full max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
 
         {/* LEFT SIDE */}
-        <div className="text-center md:text-left flex flex-col items-center md:items-start">
+        <div className="text-left flex flex-col items-start w-full max-w-2xl">
 
           {/* Badge */}
           <motion.div
@@ -39,7 +39,7 @@ export default function Hero() {
 
           {/* Main Heading */}
           <motion.h1
-            className="text-5xl sm:text-6xl md:text-7xl font-black leading-[0.95] tracking-tight text-center md:text-left"
+            className="text-5xl sm:text-6xl md:text-7xl font-black leading-[0.95] tracking-tight text-left"
             initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
           >
@@ -74,7 +74,7 @@ export default function Hero() {
 
           {/* Description */}
           <motion.p
-            className="mt-8 text-gray-400 text-lg max-w-xl leading-relaxed text-center md:text-left"
+            className="mt-8 text-gray-400 text-lg max-w-xl leading-relaxed text-left"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
@@ -201,30 +201,6 @@ export default function Hero() {
               <h3 className="font-semibold text-green-400">Online</h3>
             </motion.div>
 
-            {/* Tiny Floating Dots */}
-            <motion.div
-              className="absolute top-24 right-24 w-3 h-3 rounded-full bg-cyan-400"
-              animate={{
-                y: [0, -15, 0],
-                opacity: [0.4, 1, 0.4],
-              }}
-              transition={{
-                repeat: Infinity,
-                duration: 3,
-              }}
-            />
-
-            <motion.div
-              className="absolute bottom-28 left-20 w-2 h-2 rounded-full bg-purple-400"
-              animate={{
-                y: [0, 15, 0],
-                opacity: [0.3, 1, 0.3],
-              }}
-              transition={{
-                repeat: Infinity,
-                duration: 4,
-              }}
-            />
           </div>
         </motion.div>
       </div>
