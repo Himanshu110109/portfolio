@@ -1,229 +1,260 @@
 import { motion } from "framer-motion";
 
-const projects = [
-  {
-    icon: "🤖",
-    title: "AI Customer Support Agent",
-    problem:
-      "Businesses struggle with slow response times and repetitive customer queries.",
-    solution:
-      "Built an LLM + RAG based chatbot trained on business data to automate support.",
-    tech: ["OpenAI", "LangChain", "Vector DB", "FastAPI"],
-    result:
-      "Reduced response time by ~70% and automated common queries.",
-    github: "https://github.com/Himanshu110109/GYM-chatbot",
-    demo: "#",
-  },
-  {
-    icon: "✍️",
-    title: "AI Content Repurposing Engine",
-    problem:
-      "Creating content for multiple platforms is time-consuming.",
-    solution:
-      "Converts long-form content into posts, captions, and summaries automatically.",
-    tech: ["OpenAI API", "Prompt Engineering", "FastAPI"],
-    result: "Increased content production speed by 5–10x.",
-    github: "https://github.com/Himanshu110109/Ai-content-repurposing",
-    demo: "#",
-  },
-  {
-    icon: "🗄️",
-    title: "Natural Language SQL Assistant",
-    problem:
-      "Non-technical users cannot query databases easily.",
-    solution:
-      "Built an AI assistant that converts natural language into SQL queries and returns results.",
-    tech: ["LLM", "SQL", "FastAPI", "Prompt Engineering"],
-    result:
-      "Enabled non-technical users to access data without writing SQL.",
-    github: "https://github.com/Himanshu110109/sql-query-tool",
-    demo: "#",
-  },
-  {
-    icon: "🧠",
-    title: "Custom Fine-Tuned AI Model",
-    problem:
-      "Generic models lack accuracy for domain-specific tasks.",
-    solution:
-      "Fine-tuned an LLM on custom datasets to improve performance and relevance.",
-    tech: ["HuggingFace", "OpenAI", "Python", "Unsloth"],
-    result:
-      "Improved response accuracy and domain relevance significantly.",
-    github: "https://github.com/Himanshu110109/Fine-tuning",
-    demo: "#",
-  },
-];
-
 export default function Projects() {
+
+  const projects = [
+    {
+      title: "AI Interview System",
+      icon: "🤖",
+      problem:
+        "Traditional interview platforms feel outdated and lack intelligent interaction.",
+
+      solution:
+        "Built an AI-powered interview platform with voice interaction, evaluation logic, and real-time feedback generation.",
+
+      tech: ["React", "FastAPI", "OpenAI", "MongoDB"],
+
+      github: "#",
+    },
+
+    {
+      title: "RAG Knowledge Assistant",
+      icon: "🧠",
+      problem:
+        "Finding answers inside large document datasets is slow and inefficient.",
+
+      solution:
+        "Created a RAG-based AI assistant capable of semantic retrieval and contextual response generation.",
+
+      tech: ["LangChain", "FAISS", "Python", "OpenAI"],
+
+      github: "#",
+    },
+
+    {
+      title: "AI Automation Workflows",
+      icon: "⚡",
+      problem:
+        "Manual repetitive tasks waste time and reduce productivity.",
+
+      solution:
+        "Designed automation systems integrating APIs, AI agents, and workflow orchestration.",
+
+      tech: ["n8n", "Node.js", "APIs", "Automation"],
+
+      github: "#",
+    },
+
+    {
+      title: "Modern AI Dashboard",
+      icon: "🚀",
+      problem:
+        "Most AI dashboards feel cluttered and difficult to use.",
+
+      solution:
+        "Built a futuristic dashboard with clean UX, real-time analytics, and interactive visual systems.",
+
+      tech: ["React", "Tailwind", "Charts", "Framer Motion"],
+
+      github: "#",
+    },
+  ];
+
   return (
     <section
       id="projects"
-      className="py-20 md:py-24 px-4 sm:px-6 relative"
+      className="relative py-16 md:py-24 px-4 sm:px-6 overflow-hidden"
     >
-      <style>{`
-        .flip-wrap {
-          perspective: 1000px;
-        }
 
-        .flip-inner {
-          position: relative;
-          width: 100%;
-          height: 100%;
-          transform-style: preserve-3d;
-          transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-        }
+      {/* BACKGROUND */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
 
-        .flip-wrap:hover .flip-inner {
-          transform: rotateY(180deg);
-        }
+        <div className="absolute top-[-180px] left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-purple-600/10 blur-[180px] rounded-full" />
 
-        .flip-front,
-        .flip-back {
-          position: absolute;
-          inset: 0;
-          backface-visibility: hidden;
-          -webkit-backface-visibility: hidden;
-          border-radius: 20px;
-        }
+        <div className="absolute bottom-[-120px] right-[-100px] w-[350px] h-[350px] bg-cyan-500/10 blur-[120px] rounded-full" />
 
-        .flip-back {
-          transform: rotateY(180deg);
-        }
-      `}</style>
-
-      <div className="text-center mb-12 md:mb-16">
-        <p className="text-xs uppercase tracking-[0.3em] text-purple-400/50 mb-3">
-          What I've built
-        </p>
-
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold gradient-text">
-          Products
-        </h2>
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.025)_1px,transparent_1px)] bg-[size:40px_40px]" />
       </div>
 
-      <div className="grid md:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto">
-        {projects.map((p, i) => (
-          <motion.div
-            key={i}
-            className="flip-wrap min-h-[22rem] sm:min-h-[24rem]"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 0.5,
-              delay: i * 0.1,
-              ease: [0.23, 1, 0.32, 1],
+      <div className="relative z-10 max-w-6xl mx-auto">
+
+        {/* HEADING */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="mb-10 md:mb-14"
+        >
+
+          <p className="text-xs uppercase tracking-[0.3em] text-purple-400/60 mb-3">
+            PROJECTS
+          </p>
+
+          <h2
+            className="text-4xl sm:text-5xl md:text-6xl leading-[0.9] font-black"
+            style={{
+              fontFamily: "'Bebas Neue', sans-serif",
+              letterSpacing: "0.04em",
             }}
           >
-            <div className="flip-inner">
+            <span className="gradient-text">
+              FEATURED
+            </span>
 
-              {/* FRONT */}
-              <div className="flip-front glass glow-card card overflow-hidden">
-                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-400/70 to-cyan-400/40" />
+            <span className="text-white">
+              {" "}WORK
+            </span>
+          </h2>
 
-                <div className="relative z-10 p-6 sm:p-7 h-full flex flex-col">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-2xl">{p.icon}</span>
+          <p className="text-gray-500 text-sm sm:text-base mt-5 max-w-2xl leading-relaxed">
+            A collection of AI systems, automation workflows,
+            and futuristic digital experiences.
+          </p>
+        </motion.div>
 
-                    <span className="text-[10px] font-mono text-white/20">
-                      {String(i + 1).padStart(2, "0")} /{" "}
-                      {String(projects.length).padStart(2, "0")}
-                    </span>
+        {/* PROJECT GRID */}
+        <div className="grid md:grid-cols-2 gap-5 sm:gap-8 max-w-6xl mx-auto">
+
+          {projects.map((p, i) => (
+
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.5,
+                delay: i * 0.08,
+              }}
+            >
+
+              {/* ================= DESKTOP FLIP CARD ================= */}
+              <div className="hidden md:block flip-wrap min-h-[24rem]">
+
+                <div className="flip-inner">
+
+                  {/* FRONT */}
+                  <div className="flip-front glass glow-card card overflow-hidden">
+
+                    <div className="relative z-10 p-7 h-full flex flex-col">
+
+                      <div className="flex items-center justify-between mb-4">
+
+                        <span className="text-2xl">
+                          {p.icon}
+                        </span>
+
+                        <span className="text-[10px] font-mono text-white/20">
+                          {String(i + 1).padStart(2, "0")}
+                        </span>
+                      </div>
+
+                      <h3 className="text-xl font-semibold mb-4">
+                        {p.title}
+                      </h3>
+
+                      <p className="text-gray-400 text-sm leading-relaxed">
+                        {p.problem}
+                      </p>
+
+                      <p className="mt-auto text-[10px] text-white/20 pt-4">
+                        Hover to explore →
+                      </p>
+                    </div>
                   </div>
 
-                  <h3 className="text-lg sm:text-xl font-semibold mb-3 leading-snug">
-                    {p.title}
-                  </h3>
+                  {/* BACK */}
+                  <div
+                    className="flip-back overflow-hidden"
+                    style={{
+                      background: "rgba(139,92,246,0.12)",
+                      border: "1px solid rgba(139,92,246,0.3)",
+                    }}
+                  >
 
-                  <div className="h-px bg-gradient-to-r from-white/0 via-white/10 to-white/0 mb-3" />
+                    <div className="relative z-10 p-7 h-full flex flex-col">
 
-                  <p className="text-[9px] uppercase tracking-[0.2em] text-purple-400/50 mb-2">
-                    The Problem
-                  </p>
+                      <p className="text-gray-300 text-sm leading-relaxed mb-5">
+                        {p.solution}
+                      </p>
 
-                  <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">
-                    {p.problem}
-                  </p>
+                      <div className="flex flex-wrap gap-2 mb-5">
+                        {p.tech.map((t, j) => (
+                          <span
+                            key={j}
+                            className="text-[11px] px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-purple-300/80"
+                          >
+                            {t}
+                          </span>
+                        ))}
+                      </div>
 
-                  <p className="mt-auto text-[10px] text-white/20 flex items-center gap-1.5 pt-4">
-                    <span>⟳</span> Hover to see solution
-                  </p>
+                      <div className="flex gap-2 mt-auto">
+
+                        <a
+                          href={p.github}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="flex-1 text-center px-3 py-2.5 rounded-xl bg-white/10 border border-white/20 text-xs hover:bg-white/20 transition"
+                        >
+                          GitHub ↗
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
               </div>
 
-              {/* BACK */}
-              <div
-                className="flip-back overflow-hidden"
-                style={{
-                  background: "rgba(139,92,246,0.12)",
-                  border: "1px solid rgba(139,92,246,0.3)",
-                }}
-              >
-                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-400/80 to-cyan-400/50" />
+              {/* ================= MOBILE COMPACT CARD ================= */}
+              <div className="md:hidden rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-xl p-5">
 
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-blue-500/5 to-cyan-500/10 pointer-events-none" />
+                {/* TOP */}
+                <div className="flex items-start gap-4">
 
-                <div className="relative z-10 p-6 sm:p-7 h-full flex flex-col">
-                  <p className="text-[9px] uppercase tracking-[0.2em] text-purple-400/50 mb-2">
-                    Solution
-                  </p>
-
-                  <p className="text-gray-300 text-xs leading-relaxed mb-4">
-                    {p.solution}
-                  </p>
-
-                  <p className="text-[9px] uppercase tracking-[0.2em] text-purple-400/50 mb-2">
-                    Tech
-                  </p>
-
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {p.tech.map((t, j) => (
-                      <span
-                        key={j}
-                        className="text-[11px] px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-purple-300/80"
-                      >
-                        {t}
-                      </span>
-                    ))}
+                  <div className="text-2xl shrink-0">
+                    {p.icon}
                   </div>
 
-                  <div className="flex items-start gap-2 rounded-xl border border-green-500/20 bg-green-500/5 px-3 py-3 mb-4">
-                    <span className="text-green-400 text-xs shrink-0 mt-0.5">
-                      ↑
-                    </span>
+                  <div className="min-w-0">
 
-                    <p className="text-green-400 text-xs leading-relaxed">
-                      {p.result}
+                    <h3 className="text-base font-semibold leading-snug">
+                      {p.title}
+                    </h3>
+
+                    <p className="text-gray-400 text-sm leading-relaxed mt-2">
+                      {p.solution}
                     </p>
                   </div>
-
-                  <div className="flex gap-2 mt-auto pt-3">
-                    <a
-                      href={p.github}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex-1 text-center px-3 py-2.5 rounded-xl bg-white/10 border border-white/20 hover:bg-purple-500/30 hover:border-purple-500/50 transition-all duration-300 text-xs"
-                    >
-                      GitHub ↗
-                    </a>
-
-                    {p.demo !== "#" && (
-                      <a
-                        href={p.demo}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="flex-1 text-center px-3 py-2.5 rounded-xl bg-white/10 border border-white/20 hover:bg-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 text-xs"
-                      >
-                        Live Demo ↗
-                      </a>
-                    )}
-                  </div>
                 </div>
+
+                {/* TECH */}
+                <div className="flex flex-wrap gap-2 mt-4">
+
+                  {p.tech.slice(0, 3).map((t, j) => (
+                    <span
+                      key={j}
+                      className="text-[10px] px-2 py-1 rounded-full bg-white/5 border border-white/10 text-purple-300/80"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
+
+                {/* BUTTON */}
+                <a
+                  href={p.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 text-sm text-purple-300 mt-5 hover:text-white transition"
+                >
+                  View Project ↗
+                </a>
               </div>
 
-            </div>
-          </motion.div>
-        ))}
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );
