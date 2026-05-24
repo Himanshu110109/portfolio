@@ -4,59 +4,58 @@ export default function Projects() {
 
   const projects = [
     {
-      title: "AI Interview System",
       icon: "🤖",
+      title: "AI Customer Support Agent",
       problem:
-        "Traditional interview platforms feel outdated and lack intelligent interaction.",
-
+        "Businesses struggle with slow response times and repetitive customer queries.",
       solution:
-        "Built an AI-powered interview platform with voice interaction, evaluation logic, and real-time feedback generation.",
-
-      tech: ["React", "FastAPI", "OpenAI", "MongoDB"],
-
-      github: "#",
+        "Built an LLM + RAG based chatbot trained on business data to automate support.",
+      tech: ["OpenAI", "LangChain", "Vector DB", "FastAPI"],
+      result:
+        "Reduced response time by ~70% and automated common queries.",
+      github: "https://github.com/Himanshu110109/GYM-chatbot",
+      demo: "#",
     },
 
     {
-      title: "RAG Knowledge Assistant",
+      icon: "✍️",
+      title: "AI Content Repurposing Engine",
+      problem:
+        "Creating content for multiple platforms is time-consuming.",
+      solution:
+        "Converts long-form content into posts, captions, and summaries automatically.",
+      tech: ["OpenAI API", "Prompt Engineering", "FastAPI"],
+      result: "Increased content production speed by 5–10x.",
+      github: "https://github.com/Himanshu110109/Ai-content-repurposing",
+      demo: "#",
+    },
+
+    {
+      icon: "🗄️",
+      title: "Natural Language SQL Assistant",
+      problem:
+        "Non-technical users cannot query databases easily.",
+      solution:
+        "Built an AI assistant that converts natural language into SQL queries and returns results.",
+      tech: ["LLM", "SQL", "FastAPI", "Prompt Engineering"],
+      result:
+        "Enabled non-technical users to access data without writing SQL.",
+      github: "https://github.com/Himanshu110109/sql-query-tool",
+      demo: "#",
+    },
+
+    {
       icon: "🧠",
+      title: "Custom Fine-Tuned AI Model",
       problem:
-        "Finding answers inside large document datasets is slow and inefficient.",
-
+        "Generic models lack accuracy for domain-specific tasks.",
       solution:
-        "Created a RAG-based AI assistant capable of semantic retrieval and contextual response generation.",
-
-      tech: ["LangChain", "FAISS", "Python", "OpenAI"],
-
-      github: "#",
-    },
-
-    {
-      title: "AI Automation Workflows",
-      icon: "⚡",
-      problem:
-        "Manual repetitive tasks waste time and reduce productivity.",
-
-      solution:
-        "Designed automation systems integrating APIs, AI agents, and workflow orchestration.",
-
-      tech: ["n8n", "Node.js", "APIs", "Automation"],
-
-      github: "#",
-    },
-
-    {
-      title: "Modern AI Dashboard",
-      icon: "🚀",
-      problem:
-        "Most AI dashboards feel cluttered and difficult to use.",
-
-      solution:
-        "Built a futuristic dashboard with clean UX, real-time analytics, and interactive visual systems.",
-
-      tech: ["React", "Tailwind", "Charts", "Framer Motion"],
-
-      github: "#",
+        "Fine-tuned an LLM on custom datasets to improve performance and relevance.",
+      tech: ["HuggingFace", "OpenAI", "Python", "Unsloth"],
+      result:
+        "Improved response accuracy and domain relevance significantly.",
+      github: "https://github.com/Himanshu110109/Fine-tuning",
+      demo: "#",
     },
   ];
 
@@ -179,6 +178,7 @@ export default function Projects() {
                       </p>
 
                       <div className="flex flex-wrap gap-2 mb-5">
+
                         {p.tech.map((t, j) => (
                           <span
                             key={j}
@@ -189,15 +189,15 @@ export default function Projects() {
                         ))}
                       </div>
 
-                      <div className="flex gap-2 mt-auto">
+                      <div className="mt-auto">
 
                         <a
                           href={p.github}
                           target="_blank"
                           rel="noreferrer"
-                          className="flex-1 text-center px-3 py-2.5 rounded-xl bg-white/10 border border-white/20 text-xs hover:bg-white/20 transition"
+                          className="w-full inline-flex items-center justify-center px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-sm hover:bg-white/20 transition"
                         >
-                          GitHub ↗
+                          View Project ↗
                         </a>
                       </div>
                     </div>
@@ -226,6 +226,18 @@ export default function Projects() {
                       {p.solution}
                     </p>
                   </div>
+                </div>
+
+                {/* RESULT */}
+                <div className="mt-4 rounded-xl border border-purple-500/10 bg-purple-500/[0.05] px-3 py-2">
+
+                  <p className="text-[11px] uppercase tracking-wider text-purple-300/60 mb-1">
+                    Result
+                  </p>
+
+                  <p className="text-sm text-gray-300 leading-relaxed">
+                    {p.result}
+                  </p>
                 </div>
 
                 {/* TECH */}
