@@ -120,11 +120,11 @@ export default function Skills() {
           </p>
         </motion.div>
 
-        {/* MODERN TABS LAYOUT */}
-        <div className="grid lg:grid-cols-[280px_1fr] gap-5 md:gap-8">
+        {/* LAYOUT */}
+        <div className="grid lg:grid-cols-[260px_1fr] gap-5 md:gap-8">
 
           {/* LEFT SIDEBAR */}
-          <div className="flex lg:flex-col gap-3 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0 scrollbar-hide">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-1 gap-3">
 
             {skillGroups.map((group, index) => {
               const isActive = active === index;
@@ -133,7 +133,7 @@ export default function Skills() {
                 <button
                   key={index}
                   onClick={() => setActive(index)}
-                  className={`group relative min-w-[220px] lg:min-w-0 text-left rounded-2xl border transition-all duration-300 px-5 py-4 backdrop-blur-xl ${
+                  className={`group relative text-left rounded-2xl border transition-all duration-300 px-4 py-4 backdrop-blur-xl min-w-0 ${
                     isActive
                       ? "border-purple-500/40 bg-white/[0.05]"
                       : "border-white/10 bg-white/[0.02] hover:bg-white/[0.04]"
@@ -148,13 +148,13 @@ export default function Skills() {
                     />
                   )}
 
-                  <div className="relative z-10">
+                  <div className="relative z-10 min-w-0">
 
-                    <h3 className="text-white font-semibold text-sm sm:text-base">
+                    <h3 className="text-white font-semibold text-sm sm:text-base truncate">
                       {group.title}
                     </h3>
 
-                    <p className="text-gray-500 text-xs sm:text-sm mt-1">
+                    <p className="text-gray-500 text-xs mt-1 leading-relaxed">
                       {group.desc}
                     </p>
                   </div>
